@@ -1,0 +1,211 @@
+[C] Implement a Java Program to find largest element in a user defined 1D array. 
+
+import java.util.Scanner;
+
+public class LargestElement {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get the size of the array
+        System.out.print("Enter the size of the array: ");
+        int size = scanner.nextInt();
+
+        // Declare the array and input its elements
+        int[] array = new int[size];
+        System.out.println("Enter " + size + " elements:");
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        // Find the largest element
+        int largest = array[0];
+        for (int i = 1; i < size; i++) {
+            if (array[i] > largest) {
+                largest = array[i];
+            }
+        } 
+
+        // Display the largest element
+        System.out.println("The largest element in the array is: " + largest);
+    }
+}
+________________________________________________________________________________________________________________________________________________________
+[ C.2 ]Implement a Java program to accept a line and print how many consonants and vowels are there in line.
+
+import java.util.Scanner;
+
+public class VowelConsonantCounter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input a line of text
+        System.out.print("Enter a line of text: ");
+        String line = scanner.nextLine();
+
+        // Initialize counters for vowels and consonants
+        int vowels = 0, consonants = 0;
+
+        // Convert line to lowercase for simplicity
+        line = line.toLowerCase();
+
+        // Loop through each character in the line
+        for (char ch : line.toCharArray()) {
+            if (ch >= 'a' && ch <= 'z') { // Check if character is a letter
+                if ("aeiou".indexOf(ch) != -1) {
+                    vowels++; // Increment vowels count
+                } else {
+                    consonants++; // Increment consonants count
+                }
+            }
+        }
+
+        // Display the counts
+        System.out.println("Number of vowels: " + vowels);
+        System.out.println("Number of consonants: " + consonants);
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________
+
+[ A ]Explain Operators Precedence and Associativity in java with example.
+    Operator Precedence and Associativity in Java
+
+    In Java, operator precedence and associativity determine how expressions with multiple operators are evaluated.
+
+    * Operator Precedence
+
+         Precedence means the order in which operators are evaluated in an expression.
+         Operators with higher precedence are evaluated before operators with lower precedence.
+
+         int result = 10 + 5 * 2;
+         // '*' has higher precedence than '+', so:
+         // 5 * 2 = 10
+         // 10 + 10 = 20
+         System.out.println(result); // Output: 20
+
+    * Operator Associativity
+
+        Associativity decides the direction in which operators of the same precedence are evaluated.
+        Left-to-right associativity: Most operators like +, -, *, /.
+        Right-to-left associativity: Operators like = (assignment) and ? : (ternary).
+    
+        int result = 10 - 5 - 2;
+        // '-' has left-to-right associativity, so:
+        // (10 - 5) = 5
+        // 5 - 2 = 3
+        System.out.println(result); // Output: 3
+    
+        int a = 10;
+        a = a = 5;
+        // '=' has right-to-left associativity, so:
+        // a = (a = 5)
+        // a = 5
+        System.out.println(a); // Output: 5
+
+    [ Example with Combined Precedence and Associativity ]
+
+        int result = 10 + 5 * 2 - 6 / 2;
+        // Step-by-step evaluation:
+        // '*' and '/' have the highest precedence, so:
+        // 5 * 2 = 10
+        // 6 / 2 = 3
+        // Now the expression is: 10 + 10 - 3
+        // '+' and '-' are evaluated left-to-right:
+        // 10 + 10 = 20
+        // 20 - 3 = 17
+    
+        System.out.println(result); // Output: 17
+________________________________________________________________________________________________________________________________________________________
+
+[ B ] Illustrate a java program to do sum of command line argument passed as two float numbers
+
+public class SumCommandLineArgs {
+    public static void main(String[] args) {
+        // Check if two arguments are provided
+        if (args.length != 2) {
+            System.out.println("Please provide exactly two numbers as arguments.");
+            return;
+        }
+
+        try {
+            // Convert command-line arguments to float
+            float num1 = Float.parseFloat(args[0]);
+            float num2 = Float.parseFloat(args[1]);
+
+            // Calculate the sum
+            float sum = num1 + num2;
+
+            // Print the result
+            System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
+        } catch (NumberFormatException e) {
+            // Handle invalid input
+            System.out.println("Please enter valid float numbers.");
+        }
+    }
+}
+________________________________________________________________________________________________________________________________________________________
+
+     break and continue 
+
+     continue :- 
+            Purpose: It is used to skip the current iteration of the loop and move to the next one.
+            When the continue statement is encountered, the rest of the code in the current iteration is ignored, and the loop proceeds to the next iteration
+           
+            public class ContinueExample {
+                public static void main(String[] args) {
+                    for (int i = 1; i <= 5; i++) {
+                        if (i == 3) {
+                            continue; // Skip the current iteration when i equals 3
+                        }
+                        System.out.println(i);
+                    }
+                }
+            }
+            o/p:- 1, 2, 4, 5
+            
+      break :-
+            Purpose: It is used to exit a loop or switch statement immediately.
+            When the break statement is encountered, the program stops the loop or switch and moves to the next statement after it.
+
+            Example:- 
+            public class BreakExample {
+                public static void main(String[] args) {
+                    for (int i = 1; i <= 5; i++) {
+                        if (i == 3) {
+                            break; // Exit the loop when i equals 3
+                        }
+                        System.out.println(i);
+                    }
+                    System.out.println("Loop ended.");
+                }
+            }   
+            o/p :- 1 , 2 , end loop
+________________________________________________________________________________________________________________________________________________________
+// palindrome
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Input a number from the user
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        // Check if the number is a palindrome
+        if (palin(number)) {
+            System.out.println(number + " is a palindrome.");
+        } else {
+            System.out.println(number + " is not a palindrome.");
+        }
+    }
+    // Method to check if a number is a palindrome
+    public static boolean palin(int num) {
+        int original = num;
+        int reverse = 0;
+
+        while (num > 0) {
+            reverse = reverse * 10 + num % 10;
+            num /= 10;
+        }
+        return original == reverse;
+    }
+}

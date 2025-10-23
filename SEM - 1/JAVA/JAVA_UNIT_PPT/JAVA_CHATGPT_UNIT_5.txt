@@ -1,0 +1,390 @@
+How to create a file in java with example
+
+    you can create a file using the File class from the java.io package.
+    The method createNewFile() is used to create a new file. If the file already exists, this method will return false.
+
+
+    Steps to Create a File:-   
+
+        Import the java.io.File class.
+
+        Create a File object and specify the file name or path.
+
+        Call the createNewFile() method to create the file.
+
+        Handle any exceptions (e.g., IOException).
+    
+    Example:-
+
+    import java.io.File;
+    import java.io.IOException;
+
+    public class CreateFileExample {
+        public static void main(String[] args) {
+            try {
+                // Create a File object for the new file
+                File file = new File("example.txt");
+
+                // Create the file
+                if (file.createNewFile()) {
+                    System.out.println("File created: " + file.getName()); // File created: example.txt
+                } else {
+                    System.out.println("File already exists."); // File created: example.txt
+                }
+            } catch (IOException e) {
+                System.out.println("An error occurred while creating the file.");
+                e.printStackTrace();
+            }
+        }
+    }
+___________________________________________________________________________________________________________________________________________________________________________________________
+BufferedReader:-
+   
+BufferedReader is a class in the java.io package used to read text from a character-based input stream efficiently. 
+It reads large chunks of data at once and stores it in a buffer, reducing the number of I/O operations. 
+This makes it faster compared to reading data one character at a time.
+
+    Common Methods of BufferedReader
+    readLine():
+        Reads a single line of text.
+        Returns null when the end of the file or input is reached.
+
+    close():
+        Closes the BufferedReader to free resources.
+
+    example:-
+          try {
+                // Create a FileReader to read the file
+                FileReader fileReader = new FileReader("example.txt");
+
+                // Wrap the FileReader in a BufferedReader
+                BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+                String line;
+                // Read each line from the file until the end
+                while ((line = bufferedReader.readLine()) != null) {
+                    System.out.println(line);
+                }
+
+                // Close the BufferedReader
+                bufferedReader.close();
+
+            } catch (IOException e) {
+                System.out.println("An error occurred while reading the file.");
+                e.printStackTrace();
+            }
+___________________________________________________________________________________________________________________________________________________________________________________________
+Write short notes on collection frameworks of java
+
+The Collection Framework in Java is a set of classes and interfaces that provide an organized and efficient way to 
+store, manage, and manipulate groups of objects (like lists, sets, and maps). It is part of the java.util package
+
+The Collection Framework in Java simplifies working with data structures by providing standard implementations and operations. 
+It is widely used in all kinds of Java programs for efficient data handling.
+
+Hierarchy of Collection Framework:-
+
+    Interfaces: Define the blueprint for collections.
+        Examples: Collection, List, Set, Queue, Map.
+
+    Classes: Provide implementations for the interfaces.
+        Examples: ArrayList, HashSet, LinkedList, HashMap.
+
+Core Interfaces
+    Collection:    
+        Base interface for most collections.
+
+    List:
+        Ordered collection, allows duplicate elements.
+        Examples: ArrayList, LinkedList.
+
+    Set:
+        No duplicate elements allowed.
+        Examples: HashSet, LinkedHashSet.
+
+    Queue:
+        Follows FIFO (First In First Out) order.
+        Examples: PriorityQueue, ArrayDeque.
+
+    Map:
+        Stores key-value pairs.
+        Examples: HashMap, TreeMap.
+
+Commonly Used Classes
+    ArrayList:
+        Resizable array.
+
+        ArrayList<String> list = new ArrayList<>();
+            list.add("Apple");
+            list.add("Banana");
+    
+    HashSet:
+        Stores unique elements, no order maintained.        
+
+        HashSet<String> set = new HashSet<>();
+            set.add("Apple");
+            set.add("Banana");
+    
+    HashMap:
+        Key-value pair storage.
+
+        HashMap<Integer, String> map = new HashMap<>();
+            map.put(1, "One");
+            map.put(2, "Two");
+
+Advantages of Collection Framework:-
+
+    Reduces Development Time:
+        Predefined data structures save time and effort.
+    
+    Flexibility:
+        Supports dynamic resizing and efficient operations.
+
+    Performance:
+        Provides high-performance algorithms for sorting, searching, and more.
+
+    Methods in Collection Framework
+    
+        add(element): Add an element to the collection.
+    
+        remove(element): Remove an element from the collection.
+    
+        contains(element): Check if an element exists.
+    
+        size(): Get the size of the collection.
+    
+        iterator(): Traverse elements using an iterator.    
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+Write a program that counts number of characters, words, and lines in a file. Use exceptions to check whether the file that is read exists or not.
+
+
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) {
+        String filePath = "example.txt"; // Specify the file path
+
+        // Check if the file exists
+        File file = new File(filePath);
+        if (!file.exists()) {
+            System.out.println("File  not exist: " + filePath);
+            return;
+        }
+
+        // Variables to store counts
+        int charCount = 0;
+        int wordCount = 0;
+        int lineCount = 0;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+
+            // Read the file line by line
+            while ((line = reader.readLine()) != null) {
+                lineCount++; // Increment line count
+                charCount += line.length(); // Add characters in the line
+                wordCount += line.split("\\s+").length; // Split by spaces to count words
+            }
+
+            // Print the results
+            System.out.println("Number of Characters: " + charCount);
+            System.out.println("Number of Words: " + wordCount);
+            System.out.println("Number of Lines: " + lineCount);
+
+        } catch (IOException e) {
+            System.out.println("An error occurred while reading the file.");
+            e.printStackTrace();
+        }
+    }
+}
+[ NOTE :- LEB MA KARAVELO CHE AA PROGRAM TO 1 VAR PENDRIVE ME JOU CHE KE NAI ]
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+Write a program to replace all “word1” by “word2” from a file1, and output is written to file2 file and display the no. of replacement.
+
+[ NOTE :- LEB MA KARAVELO CHE AA PROGRAM TO 1 VAR PENDRIVE MA JOU CHE KE NAI ]
+
+import java.io.*;
+
+public class ReplaceWordInFile {
+    public static void main(String[] args) {
+        String inputFilePath = "file1.txt";  // Input file
+        String outputFilePath = "file2.txt"; // Output file
+        String wordToReplace = "word1";      // Word to replace
+        String replacementWord = "word2";    // Replacement word
+
+        int replacementCount = 0;
+
+        try (
+            BufferedReader reader = new BufferedReader(new FileReader(inputFilePath));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))
+        ) {
+            String line;
+
+            // Read the file line by line
+            while ((line = reader.readLine()) != null) {
+                // Count the number of replacements in the current line
+                int countInLine = line.split(wordToReplace, -1).length - 1;
+                replacementCount += countInLine;
+
+                // Replace all occurrences of the word in the line
+                line = line.replace(wordToReplace, replacementWord);
+
+                // Write the modified line to the output file
+                writer.write(line);
+                writer.newLine();
+            }
+
+            // Display the number of replacements
+            System.out.println("Number of replacements: " + replacementCount);
+
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+}
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+Write an application that reads a file and counts the number of occurrences of digit 5. Supply the file name as a command-line argument.
+
+import java.io.*;
+
+public class CountDigit5InFile {
+    public static void main(String[] args) {
+        // Check if the file name is provided as a command-line argument
+        if (args.length != 1) {
+            System.out.println("Usage: java CountDigit5InFile <file_name>");
+            return;
+        }
+
+        String fileName = args[0]; // Get the file name from the arguments
+        int count = 0; // Counter for digit '5'
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+            String line;
+
+            // Read the file line by line
+            while ((line = reader.readLine()) != null) {
+                // Count occurrences of '5' in the current line
+                for (char c : line.toCharArray()) {
+                    if (c == '5') {
+                        count++;
+                    }
+                }
+            }
+
+            // Display the result
+            System.out.println("The digit '5' occurs " + count + " times in the file.");
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found: " + fileName);
+        } catch (IOException e) {
+            System.out.println("An error occurred while reading the file.");
+            e.printStackTrace();
+        }
+    }
+}
+___________________________________________________________________________________________________________________________________________________________________________________________
+ Create a class called Student. Write a student manager program to manipulate the student information from files by using FileInputStream and
+FileOutputStream.
+
+import java.io.*;
+import java.util.Scanner;
+
+class Student implements Serializable {
+    private int id;
+    private String name;
+    private int age;
+
+    // Constructor
+    public Student(int id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    // Display student details
+    public void display() {
+        System.out.println("ID: " + id + ", Name: " + name + ", Age: " + age);
+    }
+}
+
+public class StudentManager {
+    private static final String FILE_NAME = "students.dat";
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("\n1. Add Student");
+            System.out.println("2. Display All Students");
+            System.out.println("3. Exit");
+            System.out.print("Enter your choice: ");
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    addStudent(scanner);
+                    break;
+                case 2:
+                    displayStudents();
+                    break;
+                case 3:
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+            }
+        }
+        scanner.close();
+    }
+
+    // Add a student and save to file
+    private static void addStudent(Scanner scanner) {
+        System.out.print("Enter Student ID: ");
+        int id = scanner.nextInt();
+        scanner.nextLine(); // Consume the leftover newline
+
+        System.out.print("Enter Student Name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter Student Age: ");
+        int age = scanner.nextInt();
+
+        Student student = new Student(id, name, age);
+
+        // Save the student to the file
+        try (FileOutputStream fos = new FileOutputStream(FILE_NAME, true);
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            oos.writeObject(student);
+            System.out.println("Student added successfully!");
+        } catch (IOException e) {
+            System.out.println("Error saving student: " + e.getMessage());
+        }
+    }
+
+    // Read and display all students from the file
+    private static void displayStudents() {
+        try (FileInputStream fis = new FileInputStream(FILE_NAME);
+             ObjectInputStream ois = new ObjectInputStream(fis)) {
+
+            System.out.println("\nStudent List:");
+            while (true) {
+                try {
+                    Student student = (Student) ois.readObject();
+                    student.display();
+                } catch (EOFException e) {
+                    break; // End of file reached
+                }
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("No students found. Add some first.");
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Error reading students: " + e.getMessage());
+        }
+    }
+}

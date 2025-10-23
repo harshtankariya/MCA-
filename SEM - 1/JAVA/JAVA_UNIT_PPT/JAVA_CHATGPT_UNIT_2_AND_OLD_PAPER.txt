@@ -1,0 +1,213 @@
+[ OLD PEPAR ]
+
+Define Encapsulation with real world example
+
+    What is Encapsulation? (In Simple Words)
+
+        Encapsulation means hiding the internal details of how something works and allowing access to only what’s necessary or safe.
+
+    In programming:
+
+        Data (variables) and methods (functions) that operate on the data are bundled together in a single unit (a class).
+        You control access to the data by using special methods called getters (to read the data) and setters (to modify the data).
+
+    Real-World Example: ATM Machine
+
+        When you use an ATM:
+    
+        You only interact with the interface (e.g., the screen and buttons).
+        You don’t see the complex internal workings of how the machine communicates with the bank, processes transactions, or updates your account.
+        The ATM encapsulates all the technical details and only shows you the relevant options like "Withdraw Money" or "Check Balance."
+_______________________________________________________________________________________________________________________________________________________________
+
+constructor overloading :- [ I.M.P ]
+
+Constructor overloading means creating multiple constructors in the same class, each having a different number or type of parameters. 
+It allows flexibility when creating objects with different amounts of information.
+
+example :- 
+class Person {
+    String name;
+    int age;
+        // Constructor 2: One parameter
+    Person(String name) {
+        this.name = name;
+        this.age = 0; // Default value
+       
+    }
+    // Constructor 3: Two parameters
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+       
+    }
+    // Method to display person details
+    void displayDetails() {
+        System.out.println("Name: " + name + ", Age: " + age );
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating objects using different constructors
+        Person person2 = new Person("Alice");                //
+        Person person3 = new Person("Bob", 25);              
+        person2.displayDetails(); // Output: Name: Alice, Age: 0, 
+        person3.displayDetails(); // Output: Name: Bob, Age: 25, 
+    }
+}
+_______________________________________________________________________________________________________________________________________________________________
+ // copy constructor 
+    [reade to book ]
+class Student {
+    String name;  // Attribute for name
+    int age;      // Attribute for age
+
+    // Parameterized Constructor
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Copy Constructor
+    Student(Student s) {
+        this.name = s.name; // Copy the name
+        this.age = s.age;   // Copy the age
+    }
+
+    // Method to display student details
+    void displayDetails() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Student student1 = new Student("Alice", 20);
+        Student student2 = new Student(student1);
+
+        System.out.println("Original Object:");
+        student1.displayDetails(); // Output: Name: Alice, Age: 20
+
+        System.out.println("Copied Object:");
+        student2.displayDetails(); // Output: Name: Alice, Age: 20
+    }
+}
+
+________________________________________________________________________________________________________________________________________________________
+[ Q_B_PAPER ] :- State why we declare main method as ‘static’? Write a program to declare userdefined static method and call it with class reference.
+
+    Why is the main Method Declared as static?
+
+         the main method is declared as static because it allows the JVM (Java Virtual Machine) to call the main method without creating an object of the class.
+
+        If main were not static, the JVM would need to create an object first to invoke it, which would create a dependency issue since main is the entry point of the program.
+
+    What is a Static Method?
+
+        A static method:
+
+            Belongs to the class rather than an instance of the class.
+
+            Can be called without creating an object of the class.
+
+            Is defined using the static keyword.
+
+class Calculator {
+    // Static method to add two numbers
+    static int addNumbers(int a, int b) {
+        return a + b;
+    }
+
+    // Static method to multiply two numbers
+    static int multiplyNumbers(int a, int b) {
+        return a * b;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Call static methods using the class name
+        int sum = Calculator.addNumbers(5, 10); // No object creation needed
+        int product = Calculator.multiplyNumbers(4, 3);
+
+        // Print the results
+        System.out.println("Sum: " + sum);         // Output: Sum: 15
+        System.out.println("Product: " + product); // Output: Product: 12
+    }
+}
+________________________________________________________________________________________________________________________________________________________
+    Implement an anonymous inner class in java with example program.
+
+    An anonymous inner class in Java is a class without a name. 
+    It is used to extend a class or implement an interface inline without creating a separate named class.
+    Anonymous inner classes are often used for short-term tasks like providing implementations of interfaces or overriding methods of a class.
+
+    Example:-
+
+            // Parent Class
+        class Animal {
+            void sound() {
+                System.out.println("Some generic animal sound");
+            }
+        }
+
+        public class Main {
+            public static void main(String[] args) {
+                // Create an anonymous inner class that overrides the sound() method
+                Animal dog = new Animal() {
+                    @Override
+                    void sound() {
+                        System.out.println("The dog barks");
+                    }
+                };
+
+                // Call the overridden method
+                dog.sound();
+            }
+        }
+        o/p :- The dog barks
+
+        ------------------------- THIS IS interface Example ----------------
+
+        // Interface
+        interface Greeting {
+            void sayHello();
+        }
+
+        public class Main {
+            public static void main(String[] args) {
+                // Create an anonymous inner class that implements the Greeting interface
+                Greeting greeting = new Greeting() {
+                    @Override
+                    public void sayHello() {
+                        System.out.println("Hello, welcome to the world of Java!");
+                    }
+                };
+
+                // Call the implemented method
+                greeting.sayHello();
+            }
+        }
+        o/p :- Hello, welcome to the world of Java!
+
+________________________________________________________________________________________________________________________________________________________
+// StringBuffer example
+public class Main {
+    public static void main(String[] args){
+      
+          // Creating StringBuffer
+        StringBuffer s = new StringBuffer("harsh tankariya ");
+      
+           s.reverse();
+           System.out.println(" ");
+           // Adding elements in StringBuffer
+        s.append("Hello");
+        
+          // String with the StringBuffer value
+          String str = s.toString();
+        System.out.println(str);
+    }
+}

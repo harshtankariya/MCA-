@@ -1,0 +1,124 @@
+=> Method Overloading
+	Method Overloading in Java is when a class has multiple methods with the same name but different parameters (number, type, or both).
+
+=> Why use method overloading?
+	Flexibility: You can perform the same action in slightly different ways depending on the input.
+	Readability: You don't need to create different method names for similar tasks. Instead, you just use the same method name but with different arguments
+
+=> Method Overriding 
+	Method Overriding in Java is when a subclass (child class) provides its own implementation of a method that is already defined in its superclass (parent class).
+	This allows the subclass to provide a specific behavior while still using the same method name as in the parent class.
+
+=> Key Points of Method Overriding:
+
+	*Same method name in both parent and child class.
+	*Same parameters (same number and type).
+	*Same return type (or a subclass of it, if it's an object).
+	*The method in the child class replaces or overrides the method in the parent class when called on a subclass object.
+
+=> Dynamic Method Dispatch 
+	Dynamic Method Dispatch in Java (also known as runtime polymorphism) is a process where the method to be called is determined at runtime, not at compile time. It occurs when a 	superclass reference is used to refer to a subclass object, and Java decides which method to execute based on the actual object type, not the reference type.
+
+	*Key Points:
+		It is the basis for runtime polymorphism in Java.
+		Method overriding enables dynamic method dispatch.
+		The decision about which method to call is made during the program's execution, based on the actual object the reference is pointing to.
+________________________________________________________________________________________________________________________________________________________
+// single  inheritance 
+
+class A{
+    int a ;
+    void dispa(){
+        System.out.println("class A :");
+    }
+}
+class B extends  A{
+    int b ;
+    void dispb(){
+        System.out.println("class b :");
+    }
+    void add(){
+        System.out.println("sum :"+(a + b));
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        B b1 = new B();
+        b1.a=10;
+        b1.b=10;
+        b1.dispa();
+        b1.dispb();
+        b1.add();
+    }
+}
+
+//  hirarchical 
+
+class A{
+    int a ;
+    void dispa(){
+        System.out.println("class A :");
+    }
+}
+class B extends  A{
+    int b ;
+   
+    void add(){
+        System.out.println("sum of A and B :"+(a + b));
+    }
+}
+class C extends  A{
+    int c ;
+    
+    void addc(){
+        System.out.println("sum of A and C :"+(a + c));
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        B b1 = new B();
+        C c1 = new C();
+        b1.a=10;
+        b1.b=10;        
+        b1.add();        
+        c1.c=5;
+        c1.a=10;
+        c1.addc();
+        
+    }
+}
+
+// multilevel 
+
+class A{
+    int a ;
+    void dispa(){
+        System.out.println("class A :");
+    }
+}
+class B extends  A{
+    int b ;
+   
+    void add(){
+        System.out.println("EXTENDS CLASS  A in B  :");
+    }
+}
+class C extends  B{
+    int c ;
+    
+    void addc(){
+        System.out.println("sum of A and B and C :"+(a +b+ c));
+    }
+}
+class Main {
+    public static void main(String[] args) {
+       
+        C c1 = new C();
+        c1.a=5;
+        c1.b=10;
+        c1.c=15;
+        c1.dispa();
+        c1.add();
+        c1.addc();
+    }
+}

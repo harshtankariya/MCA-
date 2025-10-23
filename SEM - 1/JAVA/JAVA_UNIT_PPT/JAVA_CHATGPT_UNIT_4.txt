@@ -1,0 +1,498 @@
+1 => what is exception :- 
+	In Java, an exception is a problem or error that occurs during the execution of a program. 
+
+	When something unexpected happens, like dividing a number by zero, accessing an invalid 	
+	index in an array, or trying to open a file that doesn’t exist, Java stops the normal flow of the program and "throws an exception".
+
+	Example:
+	If you try to divide a number by zero:
+		int result = 10 / 0; // This will cause an exception
+___________________________________________________________________________________________________________________________________________________________________________________________
+2 => Explain me try and catch with example
+	In Java, try and catch are used to handle errors (exceptions) in your program.
+	Instead of letting the program crash when something goes wrong, you can "try" a block of code and 	"catch" the error to deal with it.
+
+	How it Works:
+	try block:
+
+	Code that might throw an exception goes inside the try block.
+	If no error happens, the program runs normally.
+
+	catch block:
+
+	If an error occurs in the try block, the program jumps to the catch block.
+	In the catch block, you handle the error (e.g., display a message or fix the issue).
+
+	In simple terms: try means "give it a shot," and catch means "handle the problem if something breaks."
+	
+	Example:
+		Let’s divide two numbers, but handle the case where division by zero might happen.
+
+	
+        try {
+
+            // Code that might cause an exception
+            int number = 10;
+            int result = number / 0; // Division by zero (error)
+            System.out.println("Result: " + result);
+
+        } 
+	catch (ArithmeticException e) {
+
+            // Code to handle the exception
+            System.out.println("Error: Cannot divide by zero!");
+        }
+	output:- 
+
+	Error: Cannot divide by zero!
+	Program continues...  
+	
+	(A) => explain me multiple catching
+		In Java, multiple catch blocks are used when a try block might throw different types of exceptions. 
+		Each catch block is written to handle a specific type of exception. This way, you can handle different errors in different ways
+
+	How It Works:
+		The try block contains code that might throw multiple exceptions.
+		Each catch block checks for a specific type of exception.
+		If an exception occurs, Java jumps to the matching catch block and executes it.
+		
+		EXAMPLE : - 
+	try {
+
+            int[] numbers = {1, 2, 3};
+            int result = 10 / 0; // This will throw ArithmeticException
+            System.out.println(numbers[5]); // This will throw ArrayIndexOutOfBoundsException
+        }
+	 catch (ArithmeticException e) {
+            // Handle division by zero
+            System.out.println("Error: Cannot divide by zero!");
+        }
+	 catch (ArrayIndexOutOfBoundsException e) {
+            // Handle invalid array index access
+            System.out.println("Error: Array index out of bounds!");
+        }
+---------------------------------------------------------------------------
+    nested try statement :-
+
+		 nested try statement is when one try block is placed inside another try block.
+		 This allows you to handle exceptions at different levels of code execution.
+
+	Here’s a simple way to think about it:
+
+		The outer try block handles general errors or errors that may occur in the entire section of the code.
+		The inner try block is used for a specific part of the code that might also throw an exception.
+
+	Why use nested try statements? :-
+	
+		you want to handle different exceptions differently or need to focus on a smaller part of your code within a 
+		larger error-handling framework.
+
+	Example :-
+
+	public class NestedTryExample {
+    public static void main(String[] args) {
+        try {
+            System.out.println("Outer try block starts");
+
+            try {
+                // Inner try block
+                int[] numbers = {1, 2, 3};
+                System.out.println(numbers[5]); // This will throw ArrayIndexOutOfBoundsException
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Inner catch: Array index is out of bounds!");
+            }
+
+            int result = 10 / 0; // This will throw ArithmeticException
+        } catch (ArithmeticException e) {
+            System.out.println("Outer catch: Cannot divide by zero!");
+        }
+
+        System.out.println("Program continues...");
+    }
+}
+O/P :- 
+	Outer try block starts
+	Inner catch: Array index is out of bounds!
+	Outer catch: Cannot divide by zero!
+	Program continues...
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+Differentiate checked and unchecked exception and give example of both.
+
+Checked Exceptions :-
+
+	Definition: These are exceptions checked at compile time. If not handled (using try-catch or throws), the program will not compile.
+	Purpose: Used for situations that are expected to fail, like file handling or database connectivity.
+	Examples:
+		IOException (e.g., when a file is not found)
+		SQLException (e.g., issues with database access)
+
+Unchecked Exceptions :-
+
+	Definition: These are exceptions checked at runtime. The compiler does not force you to handle them.
+	Purpose: Used for programming errors, like invalid inputs or logical mistakes.
+	
+	Examples:
+		ArithmeticException (e.g., divide by zero)
+		NullPointerException (e.g., accessing a null object)
+
+| **Aspect**           | **Checked Exceptions**                        |  **Unchecked Exceptions**                    |
+|----------------------|-----------------------------------------------|----------------------------------------------|
+| **When checked**     | At compile time                               | At runtime                                   |
+| **Handling required**| Yes, must be handled or declared with `throws`| No, handling is optional                     |
+| **Examples**         | `IOException`, `SQLException`                 | `ArithmeticException`, `NullPointerException`|
+| **Cause**            | External conditions (e.g., file missing)      | Programming errors (e.g., divide by zero)    |
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+3 =>  throw and throws 
+
+1. throw:- 
+	What it does: Used to manually create and throw an exception in the program.
+	Where it's used: Inside a method.
+	When you use throw, you are saying, "Something went wrong here, and I'm throwing this specific exception."
+
+2. throws:- 
+	What it does: Declares that a method might throw an exception.
+	Where it's used: In the method's signature.
+	When you use throws, you are saying, "This method might throw this type of exception, so the caller needs to handle it."
+
+
+simple way to :-
+	throw: Imagine you're in a shop, and you discover a problem (e.g., a broken item). You "throw" the problem (complaint) to the manager to handle.
+	throws: The manager says, "I might receive complaints," so they put up a sign saying "Complaints handled here." This is like declaring exceptions.
+
+By combining throw and throws, Java lets you raise errors (throw) and inform others (throws) that they need to handle them!
+
+3. finally :-
+
+	the finally block is a part of exception handling that contains code that will always execute, no matter what happens in the try or catch blocks.
+
+	It is typically used for cleanup operations like closing files, releasing resources, or disconnecting from databases, ensuring these actions are 
+	performed whether an exception is thrown or not.
+
+ * Key Points about finally:
+	~ Always Executes: The finally block runs whether an exception is thrown or not.
+	~ Optional: You don’t have to use finally, but it’s helpful for resource cleanup.
+	~ Works with try and catch: You can use finally with or without a catch block.
+	~ Not Skipped: The finally block runs even if there’s a return statement in the try or catch block.
+Syntax:-
+	try {
+	    // Code that might throw an exception
+	} catch (ExceptionType e) {
+	    // Code to handle the exception
+	} finally {
+	    // Code that will always execute
+	}
+
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+4 => custom exception 
+	A custom exception in Java is a user-defined exception that you create to handle specific situations
+	in your program that are not covered by Java's built-in exceptions.
+
+	Think of it as creating your own error type with a meaningful name, so when something goes wrong,
+	the error message makes sense for your program.
+
+
+	Why Use a Custom Exception?
+		To make your program easier to understand by giving meaningful error names.
+		To handle application-specific errors that Java doesn't already provide.
+
+
+How to Create a Custom Exception
+Create a class that extends the Exception class (for checked exceptions) or the RuntimeException class (for unchecked exceptions).
+Add constructors to the class, so you can pass error messages or other details.
+
+Step 1: Define the Custom Exception
+
+// Custom exception class
+class AgeException extends Exception {
+    public AgeException(String message) {
+        super(message); // Pass the message to the Exception class
+    }
+}
+Step 2: Use the Custom Exception
+
+public class CustomExceptionExample {
+    public static void main(String[] args) {
+        int age = 15;
+
+        try {
+            checkAge(age); // This might throw a custom exception
+        } catch (AgeException e) {
+            System.out.println("Caught exception: " + e.getMessage());
+        }
+    }
+
+    public static void checkAge(int age) throws AgeException {
+        if (age < 18) {
+            throw new AgeException("Age must be 18 or older to register!"); // Throwing the custom exception
+        }
+        System.out.println("Age is valid!");
+    }
+}
+
+o/p:
+	Caught exception: Age must be 18 or older to register!
+
+Key Points:-
+	- Use extends Exception for checked exceptions (compiler forces you to handle it).
+	- Use extends RuntimeException for unchecked exceptions (optional to handle).
+	- Custom exceptions help make your program's errors more meaningful and specific to your application.
+
+	Analogy:
+		Imagine you’re running a library system. If a user tries to borrow more than the allowed number of books, you create a 
+		BookLimitExceededException to handle that specific error, making your code easier to understand and manage.
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+
+5. package :-
+
+	package is like a folder that helps organize your code. 
+	It groups related classes and interfaces together so that your project stays neat and easy to manage.
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+6. Multithreading:-
+
+	Multithreading in Java is a way to allow a program to do multiple tasks at the same time. 
+	It means running two or more parts of a program (called threads) in parallel.
+
+
+
+Why Use Multithreading?
+
+	Improves Performance: Tasks can run faster because they share the CPU time.
+	Efficient Use of Resources: Threads share memory, so less memory is used compared to running separate programs.
+	Better User Experience: For example, in an application, one thread can handle user input while another processes data in the background.
+
+Threads in Java
+A thread is a small unit of a program that can run independently.
+
+Creating Threads in Java
+
+
+By Extending the Thread Class
+
+
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyThread t = new MyThread(); // Create a thread
+        t.start();                   // Start the thread
+    }
+}
+O/P :- treade is runing 
+
+Key Points
+Thread Life Cycle: A thread goes through states like New, Runnable, Running, and Terminated.
+
+Synchronization: If multiple threads share data, they may need to be synchronized to avoid conflicts.
+
+Concurrency: Multithreading enables better handling of multiple operations simultaneously.
+
+Takeaway:-
+Multithreading makes your programs more efficient and responsive by allowing different parts of the program to run independently!
+
+
+
+( A )The Thread Executor Framework:- 
+
+The Thread Executor Framework in Java is a way to manage and control threads more easily. 
+Instead of creating and managing threads manually, the framework provides a pool of threads and manages their lifecycle for you. This makes your code cleaner and more efficient.
+
+Why Use Thread Executor Framework?
+Simplifies Thread Management: You don't need to start or stop threads manually.
+Improves Performance: Reuses threads from a pool, avoiding the overhead of creating new threads every time.
+Efficient Resource Usage: Controls the number of active threads to prevent overloading the system.
+
+* simple way 
+The Executor Framework makes multithreading easier, efficient, and manageable by handling the complexity of thread creation, execution, and termination for you! It’s perfect for real-world applications that require multiple tasks running in parallel.
+
+___________________________________________________________________________________________________________________________________________________________________________________________
+
+Explain life cycle of thread. Implement a program to create Multithreading using Runnable interface.
+
+class MyTask implements Runnable {
+    private String taskName;
+
+    public MyTask(String taskName) {
+        this.taskName = taskName;
+    }
+
+    @Override
+    public void run() {
+        for (int i = 1; i <= 3; i++) {
+            System.out.println(taskName + " is running: Step " + i);
+            try {
+                Thread.sleep(500); // Pause for 500ms
+            } catch (InterruptedException e) {
+                System.out.println(taskName + " interrupted");
+            }
+        }
+        System.out.println(taskName + " has completed.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create Runnable objects
+        MyTask task1 = new MyTask("Thread-1");
+        MyTask task2 = new MyTask("Thread-2");
+
+        // Create Thread objects
+        Thread thread1 = new Thread(task1);
+        Thread thread2 = new Thread(task2);
+
+        // Start threads
+        thread1.start();
+        thread2.start();
+    }
+}
+___________________________________________________________________________________________________________________________________________________________________________________________
+WAP to implement Multithreading using Thread class and Runnable interface both
+-----------------|------------------------------------------------------------------------------------------
+TREADE CLASS USE |
+-----------------|
+class MyThread extends Thread {
+    @Override
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("MyThread is running: Step " + i);
+            try {
+                Thread.sleep(500); // Pause for 500ms
+            } catch (InterruptedException e) {
+                System.out.println("MyThread interrupted");
+            }
+        }
+        System.out.println("MyThread has completed.");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        // Thread class example
+        MyThread thread1 = new MyThread();
+        thread1.start();
+    
+    }
+}
+O/P :-
+MyThread is running: Step 1
+MyThread is running: Step 2
+MyThread is running: Step 3
+MyThread is running: Step 4
+MyThread is running: Step 5
+MyThread has completed.
+
+=== Code Execution Successful ===
+------------------------------------------------------------------------------------------------------------
+// Thread class implementation
+class MyThread extends Thread {
+    @Override
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("MyThread is running: Step " + i);
+            try {
+                Thread.sleep(500); // Pause for 500ms
+            } catch (InterruptedException e) {
+                System.out.println("MyThread interrupted");
+            }
+        }
+        System.out.println("MyThread has completed.");
+    }
+}
+
+// Runnable interface implementation
+class MyRunnableTask implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("MyRunnableTask is running: Step " + i);
+            try {
+                Thread.sleep(500); // Pause for 500ms
+            } catch (InterruptedException e) {
+                System.out.println("MyRunnableTask interrupted");
+            }
+        }
+        System.out.println("MyRunnableTask has completed.");
+    }
+}
+
+public class MultithreadingDemo {
+    public static void main(String[] args) {
+        // Thread class example
+        MyThread thread1 = new MyThread();
+        
+        // Runnable interface example
+        MyRunnableTask runnableTask = new MyRunnableTask();
+        Thread thread2 = new Thread(runnableTask); // Wrap Runnable in a Thread
+        
+        // Start both threads
+        thread1.start();
+        thread2.start();
+    }
+}
+
+O/P :- 
+
+MyThread is running: Step 1
+MyRunnableTask is running: Step 1
+MyThread is running: Step 2
+MyRunnableTask is running: Step 2
+MyThread is running: Step 3
+MyRunnableTask is running: Step 3
+MyThread is running: Step 4
+MyRunnableTask is running: Step 4
+MyThread is running: Step 5
+MyRunnableTask is running: Step 5
+MyThread has completed.
+MyRunnableTask has completed.
+________________________________________________________________________________________________________________________________________________________
+// Implementing Runnable for Good Morning Thread
+GoodMorningThread// Implementing Runnable for Good Morning Thread
+class GoodMorningThread implements Runnable {
+    public void run() {
+        try {
+            for (int i = 0; i < 5; i++) { // Run the loop 5 times
+                System.out.println("Good Morning");
+                Thread.sleep(3000); // Sleep for 3 seconds
+            }
+        } catch (InterruptedException e) {
+            System.out.println("Good Morning Thread Interrupted");
+        }
+    }
+}
+
+// Implementing Runnable for Good Evening Thread
+class GoodEveningThread implements Runnable {
+    public void run() {
+        try {
+            for (int i = 0; i < 5; i++) { // Run the loop 5 times
+                System.out.println("Good Evening");
+                Thread.sleep(5000); // Sleep for 5 seconds
+            }
+        } catch (InterruptedException e) {
+            System.out.println("Good Evening Thread Interrupted");
+        }
+    }
+}
+
+// Main Class
+public class Main {
+    public static void main(String[] args) {
+        GoodMorningThread gm = new GoodMorningThread();
+        GoodEveningThread gv = new GoodEveningThread();
+        Thread thread1 = new Thread(gm);
+        Thread thread2 = new Thread(gv);
+        // Starting the threads
+        thread1.start();
+        thread2.start();
+    }
+}
