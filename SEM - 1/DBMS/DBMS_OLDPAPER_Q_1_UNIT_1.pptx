@@ -1,0 +1,189 @@
+1.=>  List and explain different types of NoSQL Databases
+
+NoSQL databases are non-relational databases designed to handle a variety of data types, offering flexibility, scalability, and performance for modern applications. They can be broadly classified into the following types:
+
+1. Key-Value Databases
+    Description:
+        Key-value databases store data as key-value pairs. Each key is unique, and the value can be any data type, from simple strings to complex objects.
+
+        Use Case: Ideal for caching, session management, and real-time applications.
+
+        Examples: Redis, DynamoDB, Memcached.
+        
+        Advantages:
+            Extremely fast read and write operations.
+            Simple structure for quick access.
+        Limitation:
+             Lacks query flexibility; retrieval requires knowing the key.
+2. Document Databases
+    Description:
+        Store data as documents, typically in JSON, BSON, or XML formats. Each document is self-contained and can have a flexible schema.
+
+        Use Case: Suitable for content management systems, catalogs, and event logging.
+
+        Examples: MongoDB, CouchDB, Amazon DocumentDB.
+
+        Advantages:
+            Schema flexibility allows easy modification of data structures.
+            Ideal for hierarchical data storage.
+        Limitation: Can lead to redundancy if not well-designed.
+
+3. Column-Family Databases
+
+Description:
+    Data is stored in columns rather than rows. Each column family is a collection of rows, and each row can have varying numbers of columns.
+
+    Use Case: Effective for analytical and large-scale applications, such as data warehousing and event tracking.
+
+    Examples: Apache Cassandra, HBase, ScyllaDB.
+
+    Advantages:
+        Efficient for querying large datasets.
+        Optimized for write-heavy workloads.
+    Limitation: Requires understanding of data modeling for optimal performance.
+4. Graph Databases
+    Description:
+    Represent data as nodes (entities) and edges (relationships), making them ideal for highly interconnected datasets.
+
+    Use Case: Social networks, recommendation engines, and fraud detection systems.
+
+    Examples: Neo4j, ArangoDB, Amazon Neptune.
+
+    Advantages:
+        Handles complex relationships efficiently.
+        Queries relationships with minimal effort using graph traversal.
+    Limitation: Not suited for analytical queries or large-scale bulk operations.
+
+5. Time-Series Databases
+
+    Description:
+    Specialized for handling time-stamped or sequential data, such as metrics or events.
+
+    Use Case: Monitoring, IoT applications, and stock market analysis.
+
+    Examples: InfluxDB, TimescaleDB, OpenTSDB.
+
+    Advantages:
+        Optimized for storing and querying time-based data.
+        Efficient compression and retention policies.
+    Limitation: Limited use outside time-series-specific data.
+
+6. Object-Oriented Databases
+    Description:
+    Store data in the form of objects, similar to object-oriented programming. Objects can include data and methods.
+
+    Use Case: Applications that require integration with object-oriented programming models.
+
+    Examples: db4o, ObjectDB.
+
+    Advantages:
+        Seamless mapping between application objects and database objects.
+        Reusability of objects across applications.
+    Limitation: Not as widely adopted as other NoSQL types.
+
+*Choosing the Right NoSQL Database:
+ The choice depends on the application's requirements:
+
+Fast lookups: Key-Value.
+
+Flexible data structure: Document.
+
+Large-scale analytics: Column-Family.
+
+Complex relationships: Graph.
+
+Time-stamped data: Time-Series.
+
+OOP integration: Object-Oriented.
+
+NoSQL databases offer tailored solutions for specific needs, providing significant advantages over traditional relational databases in many scenarios.
+
+___________________________________________________________________________________________________________________________________________________
+
+[ Q-BANK ]
+
+9.=> What is a cursor in SQL, and when should it be used? Explain with an example. 
+
+    What is a Cursor in SQL?
+        A cursor in SQL is a database object used to retrieve, manipulate, and process rows one at a time from a result set.
+        Unlike regular SQL queries that handle data in bulk, a cursor allows row-by-row processing, making it useful for scenarios where sequential data handling is needed.
+
+    When Should a Cursor Be Used?
+
+        Cursors should be used sparingly as they can impact performance. Use them when:
+
+        You need to process each row in a result set individually (e.g., applying complex logic to each row).
+
+        Bulk SQL operations are not possible or practical.
+
+        The logic requires iterative processing that cannot be achieved using regular JOIN, UPDATE, or INSERT statements.
+
+        Key Components of a Cursor // EXTAR THIS LINE numbers 121 TO 130
+            Declaration: Define the cursor and the query it uses.
+
+            Open: Open the cursor to establish the result set.
+
+            Fetch: Retrieve rows from the cursor one at a time.
+
+            Close: Release the cursor when done.
+
+            Deallocate: Free the cursor’s memory resources.
+
+NOTE : example baki che aapvu 
+___________________________________________________________________________________________________________________________________________________
+
+10.=> Explain triggers in SQL. What are the different types of triggers, and how are they used for exception handling
+
+What is a Trigger in SQL?
+        A trigger is a special type of stored procedure in a database that is automatically executed in response to certain events on a table or view.
+        Triggers are primarily used to enforce business rules, maintain data integrity, log changes, or automate tasks.
+
+Types of Triggers in SQL
+        DML Triggers (Data Manipulation Language Triggers):
+
+             Fired in response to INSERT, UPDATE, or DELETE operations on a table.
+             Subtypes:
+             AFTER Trigger: Executes after the triggering event (e.g., after a row is inserted).
+             Example use case: Logging changes in a table.
+             INSTEAD OF Trigger: Overrides the triggering operation, allowing custom behavior.
+             Example use case: Preventing certain updates or inserts.
+
+        DDL Triggers (Data Definition Language Triggers):
+
+            Fired in response to CREATE, ALTER, or DROP operations on database objects.
+            Use Case: Auditing schema changes or preventing certain modifications.
+
+        Logon Triggers:
+
+            Fired in response to LOGON events when a user connects to the database.
+            Use Case: Restricting database access or logging user activity.
+
+* How Triggers Are Used for Exception Handling
+
+        Triggers can be used to validate data, log errors, or roll back transactions when certain conditions are not met. For example:
+
+        Preventing invalid data from being inserted.
+        Logging errors or unexpected actions into a custom error log table.
+
+* Trigger for Exception Handling
+            To handle exceptions, triggers can use ROLLBACK statements to undo changes or log errors.
+
+            Example: Prevent inserting negative salaries into an Employees table.
+            //. start trigger
+
+            CREATE TRIGGER CheckSalary
+
+            ON Employees
+            AFTER INSERT
+            AS
+            BEGIN
+                IF EXISTS (SELECT * FROM inserted WHERE Salary < 0)
+                BEGIN
+                    -- Rollback the transaction
+                    ROLLBACK TRANSACTION;
+
+                    -- Log the error
+                    INSERT INTO ErrorLog (Message, LogTime)
+                    VALUES ('Negative salary insertion attempt', GETDATE());
+                END
+            END;

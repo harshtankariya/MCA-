@@ -1,0 +1,88 @@
+1.=> Constraints in DBMS:
+
+        Constraints in a database are rules or conditions applied to data in a table to ensure its accuracy, integrity, and validity.
+         They restrict the type of data that can be stored in a column, helping maintain consistent and reliable data in the database.
+
+         Types of Constraints:
+    1. NOT NULL
+
+            Ensures that a column cannot have a NULL value.
+            Example: A Name column in a student table cannot be empty.
+
+    2. UNIQUE
+
+            Ensures that all values in a column are unique (no duplicates).
+            Example: Email IDs in a user table must be unique
+
+    3. PRIMARY KEY
+
+            A combination of NOT NULL and UNIQUE.
+            Uniquely identifies each row in a table.
+            Example: The ID column in a student table.
+
+    4. FOREIGN KEY
+
+            Ensures a relationship between two tables by linking a column in one table to the primary key of another table.
+            Example: A StudentID in a marks table refers to the ID in the student table.
+
+    5. CHECK
+
+            Ensures that all values in a column satisfy a specific condition.
+            Example: Age must be greater than or equal to 18.
+
+    6. DEFAULT
+
+            Provides a default value for a column when no value is specified.
+            Example: If no country is specified, set the default to "India."
+
+Why Constraints Are Important:
+
+        Maintain Data Integrity: Prevent invalid or inconsistent data.
+        Reduce Errors: Enforce rules directly at the database level.
+        Ensure Relationships: Keep related data in sync (e.g., foreign key constraints).
+        In simple words, constraints are like guards in a database that ensure data stays correct and meaningful!
+
+___________________________________________________________________________________________________________________________________________________
+
+2.=> Key in DBMS:
+
+        A key in a database is a column (or a combination of columns) in a table that is used to uniquely identify rows.
+         Keys ensure that there is no duplicate or inconsistent data in the table.
+
+    1. Primary Key
+
+        A column or set of columns that uniquely identifies each row in a table.
+        It cannot have duplicate or NULL values.
+        Example: In a "Student" table, the StudentID can be the primary key.
+
+
+    2. Foreign Key
+
+        A column in one table that links to the primary key of another table.
+        It ensures a relationship between the two tables.
+        Example: In an "Order" table, CustomerID is a foreign key referring to the primary key in the "Customer" table.
+
+
+    3. Unique Key
+
+        Ensures all values in a column are unique, but unlike the primary key, it can have a single NULL value.
+        Example: In a "User" table, Email can be a unique key.
+
+
+    * Why Are Keys Important?
+
+        Uniqueness: Prevent duplicate data.
+        Relationships: Link data between tables (using foreign keys).
+        Data Integrity: Ensure consistency and reliability of data.
+
+    *  In simple terms, keys are like identifiers that help manage and connect data effectively in a database.
+
+___________________________________________________________________________________________________________________________________________________
+
+User-Defined Function (UDF) in DBMS:
+
+        A User-Defined Function (UDF) is a function created by the user in a database to perform a specific task.
+        Unlike built-in functions provided by the database (e.g., SUM(), AVG()), UDFs are custom and can be designed to handle complex logic,
+        calculations, or operations that are not directly available.
+__________________________________________________________________________________________________________________________________________________
+1.	What is the difference between GROUP BY and ORDER BY in SQL? Provide an example of each.

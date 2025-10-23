@@ -1,0 +1,258 @@
+
+1. conflicting interaction
+
+a conflicting interaction happens when two or more transactions are working with the same data at the same time, and their actions interfere with each other,
+ leading to 	possible errors or incorrect results.
+
+-When does it happen?
+	Conflicts occur when:
+
+	-Two transactions access the same data item, and
+	-At least one transaction is trying to write (update) the data.
+
+	Types of Conflicting Interactions:
+	(A).Read-Write Conflict:
+
+	- One transaction is reading the data while another is writing to it.
+
+Example:
+	Transaction 1 writes a new value to a data item.
+	Before it's finalized, Transaction 2 reads the unconfirmed value.
+
+	(B). Write-Write Conflict:
+
+	Two transactions try to write to the same data item at the same time.
+Example:
+
+	Transaction 1 writes a value, then Transaction 2 overwrites it without considering the first change.
+	
+	(C).Write-Read Conflict:
+
+	One transaction writes a value, and another transaction reads it before the first one is done.
+Example:
+	Transaction 1 writes a value but hasn’t committed, and Transaction 2 reads it. If T1 rolls back, T2 has incorrect data.
+___________________________________________________________________________________________________________________________________________________
+[ Q_bank_1 ]
+1.	What are the main steps involved in query processing in a database management system?	
+
+	Query processing in a Database Management System (DBMS) involves several steps that transform a high-level query (e.g., in SQL) into an efficient execution plan to retrieve the desired results. The main steps are:
+
+	1. Query Parsing:-
+
+		Syntax Analysis: The DBMS checks the syntax of the query to ensure it follows the language rules (e.g., SQL syntax).
+
+		Semantic Analysis: Validates whether the query makes logical sense, such as checking if tables, columns, or operators exist and are used correctly.
+
+		Query Decomposition: Breaks the query into smaller components or sub-queries for easier processing.
+
+	2. Query Optimization:-
+
+		The DBMS evaluates multiple execution strategies and selects the one that minimizes resource usage (e.g., time, memory, or disk I/O).
+
+		Cost-based Optimization: Estimates the cost of different query execution plans based on factors like table size, index availability, and join algorithms.
+
+		Rule-based Optimization: Applies predefined rules to rewrite the query for better performance.
+
+	3. Query Transformation:-
+
+		The DBMS rewrites the query into an equivalent form that is more efficient to execute.
+
+		Examples include simplifying predicates, pushing down selections, or replacing subqueries with joins.
+
+	4. Plan Generation:-
+
+		The DBMS generates an execution plan, which specifies how the query will be executed, including:
+
+		Access methods (e.g., sequential scan, index scan).
+
+		Join strategies (e.g., nested loops, hash joins).
+
+		Order of operations.
+	5. Plan Execution::-
+
+		The DBMS executes the query plan using its query execution engine.
+
+		Access Methods: Retrieves data from the database using indexes or table scans.
+
+		Operator Evaluation: Performs operations like filtering, sorting, joining, or aggregating as defined in the plan.
+
+	6. Result Output:-
+
+		The final results are returned to the user or application.
+
+		Intermediate results are processed and formatted as required.
+
+	Key Components Involved in Query Processing::-
+
+		Query Parser: Handles parsing and syntax checking.
+
+		Query Optimizer: Responsible for optimizing the query execution.
+
+		Query Executor: Executes the plan and produces the result
+___________________________________________________________________________________________________________________________________________________
+[Q_bank_2]
+2.	Explain query optimization and why it is important. How does a query optimizer work?
+
+	What is Query Optimization?
+
+		Query optimization is the process in a Database Management System (DBMS) where the system finds the most efficient way to execute a query.
+		A query can often be executed in multiple ways, and the optimizer aims to select the one that uses the least resources (time, memory, CPU, etc.) 
+		while producing the same result.
+
+	 example:- 
+	 if you ask a database to find all the employees in a company with a salary above a certain amount, there could be multiple ways to do it.
+	 The optimizer chooses the fastest way.
+
+	Why is Query Optimization Important?
+
+	Performance Improvement: Optimized queries run faster, making applications more responsive.
+
+	Resource Efficiency: Saves memory, disk usage, and CPU power, especially for large datasets.
+
+	Scalability: Helps databases handle more users or larger amounts of data.
+
+	Cost Reduction: In cloud environments, efficient queries can reduce operational costs.
+
+	How Does a Query Optimizer Work?
+
+		The optimizer works like a decision-maker that evaluates all possible ways to run a query and chooses the best one. Here's a simple breakdown:
+
+	Analyzing the Query:-
+
+		The optimizer looks at the query to understand what the user wants, such as filtering rows, joining tables, or sorting data.
+
+	Generating Execution Plans:-
+
+		It creates multiple "execution plans," which are like blueprints for running the query.
+
+		For example:
+
+			Should it read the whole table (table scan) or use an index to find rows quickly?
+			Should it join two tables using nested loops or a faster hash join?
+
+	Estimating Costs:-
+
+		For each plan, the optimizer estimates the "cost" in terms of resources like time and memory.
+
+		Factors Considered:
+
+		Size of tables.
+
+		Availability of indexes.
+
+		Network or disk usage.
+
+		Data distribution (e.g., are many rows filtered out?).
+
+	Choosing the Best Plan:-
+
+			The optimizer picks the plan with the lowest estimated cost. This plan is then sent to the database engine for execution.
+___________________________________________________________________________________________________________________________________________________
+
+ schedule :-
+
+	schedule is the order in which a series of database operations (like reading, writing, updating data) from one or more transactions are executed.
+
+	What is a Schedule?
+
+		When multiple transactions are running, a schedule is a sequence that arranges the operations of those transactions.
+		The goal of a schedule is to ensure that these transactions work together without causing errors or corrupting the database.
+___________________________________________________________________________________________________________________________________________________
+
+5.What is the difference between serial and non-serial schedules? Explain serializability
+
+| **Aspect**         |   Serial Schedule                                    |     Non-Serial Schedule                                   |
+|--------------------|------------------------------------------------------|-----------------------------------------------------------|
+|					 |														|															|			
+| **Definition**     | Transactions are executed **one after another**.     | Transactions are executed **in an interleaved manner**.   |
+|					 |														|															|
+| **Execution Order**| No overlapping between transactions.                 | Operations from different transactions overlap.           |
+|					 |														|															|
+| **Correctness**    | Always maintains database correctness (safe).        | May cause conflicts if not properly managed.              |
+|					 |														|															|
+| **Performance**    | Slower because no parallelism.                       | Faster due to parallelism but riskier without control.    |
+
+What is Serializability?
+
+	Serializability ensures that even if transactions are executed in a non-serial schedule, the result is the same as if they were executed in a serial schedule.
+	It is a way to check if the interleaved execution of transactions is safe and maintains database consistency.
+
+	Types of Serializability:- 
+	
+		Conflict Serializability:
+		Ensures that operations in the schedule do not conflict and can be rearranged to match a serial schedule.
+
+		View Serializability:
+		Ensures that the final output of the non-serial schedule matches the output of some serial schedule.
+
+___________________________________________________________________________________________________________________________________________________
+What is a Lock-Based Protocol in DBMS?
+	A Lock-Based Protocol is a method used in DBMS to manage how multiple transactions access the same data in a database at the same time.
+	It ensures that transactions do not interfere with each other and that the database remains consistent.
+
+Types of Locks
+	Shared Lock (S):-
+		Allows a transaction to read a data item.
+
+		Other transactions can also read the same data at the same time (shared access).
+
+	Exclusive Lock (X):-
+		Allows a transaction to read and write a data item.
+
+		No other transaction can access the data (exclusive access).
+___________________________________________________________________________________________________________________________________________________
+What is a Deadlock in Transaction Management?
+A deadlock happens when two or more transactions are waiting for each other to release resources (like locks),
+ but none of them can proceed because they are all stuck waiting. 
+
+	It’s like a traffic jam where no vehicle can move because each one is blocking the other.
+	
+	Example of a Deadlock:
+		Transaction T1:
+			Locks resource A and wants resource B.
+	
+		Transaction T2:
+			Locks resource B and wants resource A.
+	
+		Now:
+	
+			T1 is waiting for T2 to release B.
+			T2 is waiting for T1 to release A.
+			Neither can proceed, causing a deadlock.
+	
+	How Can Deadlocks Be Detected?
+	
+	Wait-For Graph:
+	
+		The DBMS creates a graph where:
+		Transactions are nodes.
+		A directed edge (arrow) is drawn from one transaction to another if it is waiting for a resource held by the other.
+		If the graph contains a cycle, a deadlock is detected.
+	
+	Timeouts:
+	
+		The system sets a time limit for a transaction to wait for a resource.
+		If the transaction exceeds this limit, it is assumed to be in a deadlock and is aborted.
+
+How Can Deadlocks Be Resolved?
+
+		Transaction Rollback:-
+
+			The DBMS aborts one or more transactions involved in the deadlock to break the cycle.
+			The transaction(s) are restarted later.
+
+		Deadlock Prevention:-
+
+			Avoid deadlocks by controlling how locks are acquired:
+
+			Wait-Die Scheme: Older transactions wait, and newer ones are aborted if they conflict.
+
+			Wound-Wait Scheme: Older transactions force newer ones to release locks (newer ones are aborted).
+
+		Deadlock Avoidance:-
+
+			The DBMS checks if a transaction might lead to a deadlock before granting a lock.
+
+			If a potential deadlock is detected, the transaction is made to wait or is aborted early.
+
+

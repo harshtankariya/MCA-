@@ -1,0 +1,53 @@
+mapping cardinality 
+
+	Mapping Cardinality in DBMS refers to the number of relationships that can exist between entities in a database.
+	It describes how entities from two different sets can associate with each other. 
+
+	it tells us how many instances of one entity are related to instances of another entity.
+
+	These relationships are crucial for designing the database structure and defining how data will be connected and queried.
+________________________________________________________________________________________________________________________________________________________________
+5.	Explain functional dependency (FD) in relational database design with an example.
+
+Functional Dependency (FD) in a relational database shows a relationship between two attributes in a table
+where the value of one attribute uniquely determines the value of another attribute. It is a key concept used to design databases and ensure data consistency.
+
+Definition in Simple Words:
+
+If you know the value of one attribute (say A), and it always helps you find the value of another attribute (say B), then B is functionally dependent on A.
+We write it as: A → B (A determines B).
+
+Functional Dependency Example in DBMS:
+
++------------+--------------+-------------+
+| StudentID  | StudentName  | Course      |
++------------+--------------+-------------+
+| 101        | Alice        | Mathematics |
+| 102        | Bob          | Physics     |
+| 103        | Alice        | Chemistry   |
++------------+--------------+-------------+
+
+Functional Dependency:
+StudentID → StudentName
+
+Explanation:
+If you know the StudentID, you can uniquely determine the StudentName.
+For example, if StudentID = 101, the StudentName is Alice.
+
+________________________________________________________________________________________________________________________________________________________________
+
+decomposition means breaking a large table into smaller, related tables to remove redundancy (repeated data) 
+and avoid anomalies (like insert, update, and delete anomalies). This process is used to organize the database better and make it more efficient.
+
+* Why Decomposition is Needed:
+	If a table has too much repeated information or has data that leads to anomalies (problems when adding, updating, or deleting data), 
+	we break it down into simpler, smaller tables.
+
+* Normalization 
+	in DBMS is the process of organizing data in a database to reduce redundancy (duplicate data) and improve data integrity.
+	It involves breaking a large table into smaller, related tables and ensuring that data is stored in a logical and efficient manner.
+
+* Why Normalization is Important:
+	It helps to remove repeated or unnecessary data.
+	It prevents anomalies (problems when inserting, updating, or deleting data).
+	It makes the database more efficient and easier to maintain.
