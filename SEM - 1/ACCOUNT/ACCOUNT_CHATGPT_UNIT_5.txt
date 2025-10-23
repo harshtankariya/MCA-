@@ -1,0 +1,81 @@
+1.=> expenditure:-
+
+            In accounting, expenditure means the money spent by a business to buy goods, services, or assets.
+            It refers to the cost incurred to run the business or invest in things that will help the business grow.
+
+Types of Expenditure:
+
+    (A). Revenue Expenditure:
+            
+            Money spent on the day-to-day operations of the business.
+
+                Example: Paying for rent, electricity, or employee salaries.
+                            These are short-term expenses.
+    (B).Capital Expenditure:
+            
+        Money spent to buy long-term assets for the business.
+                Example: Buying machinery, a new building, or equipment.
+                        These are investments for the future.
+
+                 Example in Simple Words:
+                        If you own a shop:
+
+        Buying stock to sell is revenue expenditure.
+        Buying a new cash register is capital expenditure.
+
+    In Simple Words:
+        Expenditure is the money a business spends to keep running or to grow. It can be for everyday needs or for big investments.
+
+_________________________________________________________________________________________________________________________________________________________________________
+
+2.=> income:-
+         income is the money a person or business earns from various activities, like selling products, providing services, or earning interest. 
+         It is the amount that adds to your wealth or profit.
+_________________________________________________________________________________________________________________________________________________________________________
+
+   [ equity ] :- 
+          equity refers to the owner's share or claim on the assets of a business after all liabilities (debts) have been paid. 
+          It's like the value of what the owner truly "owns" in the business.
+
+           equity is the amount left for the owner(s) if the business sold all its assets and paid off all its debts. Let me know if you'd like more examples!
+
+           Also Known As: Net worth, owner's capital, or shareholder's equity (for companies).
+
+           Formula for Equity:
+
+                Equity = Assets − Liabilities
+
+                Assets: What the business owns (e.g., cash, property, inventory).
+
+                Liabilities: What the business owes (e.g., loans, creditors).
+
+                Example:
+                        Your business has ₹10,00,000 in assets (cash, equipment, etc.).
+
+                        It owes ₹4,00,000 in liabilities (loans, bills, etc.).
+
+                        Equity = ₹10,00,000 - ₹4,00,000 = ₹6,00,000.
+
+                This ₹6,00,000 is the owner's equity—what belongs to the owner(s) of the business.
+_________________________________________________________________________________________________________________________________________________________________________
+3.=>  contingent :- 
+        A contingent liability is a possible financial obligation that may or may not happen in the future, depending on certain events.
+        It is not an actual liability right now but something that could become one if certain conditions are met.
+
+        simpl word :- A contingent liability is like saying, "I might have to pay this, but only if something specific happens."
+_________________________________________________________________________________________________________________________________________________________________________
+4.=> provisions and reserves
+        provisions and reserves are both ways to set aside money, but they serve different purposes. Let’s break it down simply
+
+        Provisions:
+                Provisions are money set aside for specific future expenses or losses that are expected to happen.
+                These are based on known or likely obligations.
+
+        Reserves:
+                Reserves are money set aside from profits for general purposes or to strengthen the financial position of the business.
+                These are not for specific expenses but for future needs or emergencies.
+
+                Easy Way to Remember:
+                        Provisions = Money set aside for known problems (e.g., bad debts, repairs).
+                        Reserves = Money set aside for general safety or growth (e.g., future expansion, emergencies).
+_________________________________________________________________________________________________________________________________________________________________________

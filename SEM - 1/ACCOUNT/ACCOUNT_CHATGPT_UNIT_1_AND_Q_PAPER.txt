@@ -1,0 +1,233 @@
+1. voucher :-  voucher is a document that serves as proof of a business transaction. 
+                It is used to verify that a payment or expense has been approved and is valid.
+                
+               In simple terms, a voucher helps keep track of payments and ensures everything is properly documented for transparency.
+________________________________________________________________________________________________________________________________________________________
+
+2.subsidiary :-                
+                subsidiary book is like a smaller notebook used to record specific types of transactions in detail.
+                 Instead of putting all transactions directly into the main book (called the ledger), businesses use subsidiary books 
+                 to organize similar transactions together.
+
+        For example:
+
+        All sales are recorded in the Sales Book.
+        All purchases are recorded in the Purchase Book.
+        Cash transactions go in the Cash Book.
+
+        This makes it easier to manage and find details about a specific type of transaction.
+        Later, the totals from these subsidiary books are posted to the ledger. It's a simple way to keep things organized!
+________________________________________________________________________________________________________________________________________________________
+3.Account :-
+        Account in simple words is a way to record and track money-related activities. It helps keep track of:
+
+            What comes in (like money earned or received).
+            What goes out (like money spent or given away).
+
+        Each type of activity is grouped into a specific "account" so it's easier to see where the money is going or coming from. For example:
+
+        Cash Account: Tracks all cash transactions.
+
+        Sales Account: Tracks money earned from selling things.
+
+        Expense Account: Tracks money spent on things like rent, salaries, or bills.
+
+        Accounts help businesses and individuals understand their financial situation clearly.
+________________________________________________________________________________________________________________________________________________________
+4.Debtor :-
+
+        A debtor is someone who owes money to you.
+
+        Example: If you sell goods to a customer on credit, the customer is your debtor because they have to pay you later.
+
+5.Creditor :-
+
+    A creditor is someone to whom you owe money.
+
+    Example: If you buy goods from a supplier on credit, the supplier is your creditor because you have to pay them later.
+
+In short:
+
+    Debtor = Borrower (owes you money)
+    Creditor = Lender (you owe them money)
+________________________________________________________________________________________________________________________________________________________    
+6.discounts:
+
+discounts are reductions in the price of goods or services. There are two common types: Trade Discount and Cash Discount.
+
+    A. Trade Discount:-
+
+        A trade discount is given by a seller to the buyer as an incentive for buying in bulk or for business purposes.
+
+        It is not recorded in the books of accounts because it is deducted directly on the invoice.
+
+        Example:
+
+        You buy goods worth ₹10,000, and the seller offers a 10% trade discount.
+
+        You pay ₹9,000 directly. The ₹1,000 discount is not recorded separately.
+
+    B. Cash Discount:-
+
+    A cash discount is given to a buyer as an incentive for paying early.
+
+    It is recorded in the books of accounts because it is directly related to the payment.
+
+        Example:
+
+        You owe ₹10,000 to a supplier. If you pay within 10 days, the supplier offers a 5% cash discount.
+        
+        If you pay early, you give ₹9,500, and the ₹500 discount is recorded as a cash discount in your accounts.
+
+    Key Difference:
+
+    Trade Discount: For buying goods, not recorded in accounts.
+
+    Cash Discount: For paying early, recorded in accounts.
+________________________________________________________________________________________________________________________________________________________ 
+
+7.net profit and net loss :- 
+
+    Net Profit and Net Loss show how well a business is doing financially
+
+    Net Profit
+        Net Profit is the money left after subtracting all expenses from income.
+
+        It means the business is making money.
+        
+    Formula:
+
+    Net Profit = Total Income - Total Expenses
+
+    Example:
+
+    A business earns ₹50,000 and spends ₹30,000.
+    Net Profit = ₹50,000 - ₹30,000 = ₹20,000.
+    
+    Net Loss:- 
+
+        Net Loss happens when expenses are more than income.
+
+        It means the business is losing money.
+
+    Formula:
+
+        Net Loss = Total Expenses - Total Income
+
+    Example:
+
+    A business earns ₹30,000 and spends ₹50,000.
+    Net Loss = ₹50,000 - ₹30,000 = ₹20,000.
+
+    Key Difference:
+
+    Net Profit: Income > Expenses (money gained).
+    Net Loss: Expenses > Income (money lost).
+________________________________________________________________________________________________________________________________________________________
+[ Q_1_C ]
+Classify the following accounts under three types of accounts: Personal, Real or
+Nominal Accounts:
+1. Stationery A/c
+2. Drawings A/c
+3. Machinery A/c
+4. Rent received A/c
+5. Trademark A/c
+6. Carriage Outward A/c
+7. Outstanding Salary A/c
+
+    Personal Account: Related to individuals, firms, or institutions.
+
+    Real Account: Related to tangible or intangible assets (e.g., cash, machinery, trademarks).
+
+    Nominal Account: Related to expenses, losses, income, or gains (e.g., rent, salary, profit).
+
+    Classification:
+
+        Stationery A/c:
+        Type: Nominal Account (Expense related to business operations).
+
+        Drawings A/c:
+        Type: Personal Account (Represents the owner withdrawing money or goods).
+
+        Machinery A/c:
+        Type: Real Account (Tangible asset).
+
+        Rent received A/c:
+        Type: Nominal Account (Income).
+
+        Trademark A/c:
+        Type: Real Account (Intangible asset).
+
+        Carriage Outward A/c:
+        Type: Nominal Account (Expense related to delivery).
+
+        Outstanding Salary A/c:
+        Type: Personal Account (Represents a liability to employees, treated as a representative personal account).
+________________________________________________________________________________________________________________________________________________________
+[ Q_2_B ]
+    What are Subsidiary Books? Explain types of Subsidiary Books
+
+    
+What are Subsidiary Books ?
+Subsidiary books are special-purpose books used in accounting to record specific types of transactions separately.
+They help keep the main ledger organized by grouping similar transactions in one place, making the bookkeeping process easier and more efficient.
+
+[ NOTE : - more read to ppt no - 66 ] 
+
+Types of Subsidiary Books:- 
+
+Purchases Book:-
+
+    Purpose: Records all credit purchases of goods (not cash purchases).
+
+    Example: If you buy inventory worth ₹10,000 on credit, it is recorded here.
+
+Sales Book:-
+
+    Purpose: Records all credit sales of goods.
+
+    Example: If you sell products worth ₹15,000 on credit, it is recorded here.
+
+Purchase Returns Book (or Returns Outward Book):-
+
+    Purpose: Records goods returned to suppliers due to defects or other issues.
+    Example: Returning defective goods worth ₹3,000 to a supplier.
+
+Sales Returns Book (or Returns Inward Book):-
+
+Purpose: Records goods returned by customers due to defects or other issues.
+Example: A customer returning goods worth ₹2,000.
+
+Cash Book:-
+
+    Purpose: Records all cash transactions, including cash receipts and payments.
+
+    Types:
+
+    Single Column Cash Book: For cash only.
+
+    Double Column Cash Book: For cash and bank transactions.
+
+    Triple Column Cash Book: For cash, bank, and discounts.
+
+    Example: Paying ₹5,000 in cash or receiving ₹8,000.
+
+Bills Receivable Book:-
+
+    Purpose: Records bills (promises to pay) received from customers.
+
+    Example: Receiving a bill from a customer for ₹12,000.
+
+Bills Payable Book:-
+
+    Purpose: Records bills issued by the business to suppliers or creditors.
+
+    Example: Issuing a bill of ₹10,000 to a supplier.
+
+Journal Proper:-
+    Purpose: Records transactions that don’t fit into other subsidiary books, such as opening entries, adjustments, or errors corrected.
+
+    Example: Depreciation of machinery or transfer of opening balances.
+
+
+________________________________________________________________________________________________________________________________________________________

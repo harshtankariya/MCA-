@@ -1,0 +1,43 @@
+ fixed liabilities:-
+
+    fixed liabilities are long-term debts or obligations that a business is responsible for paying over a period longer than one year.
+    These are not due immediately but need to be paid in the future.
+
+    fixed liabilities are like big debts that a business doesn’t need to pay back immediately but will settle over time. 
+    Let me know if you’d like a deeper dive into how they are recorded in accounts!
+
+_________________________________________________________________________________________________________________________________________________________________________
+expenses:-
+
+    expenses are the costs a business incurs to operate and earn revenue. These are the things a business spends money on to run smoothly and generate income.
+
+    Purpose: Expenses are necessary to keep the business running 
+
+    expenses are the money a business spends to make money. If you keep your expenses low while earning more, your profit increases!
+_________________________________________________________________________________________________________________________________________________________________________
+
+| **Aspect**                  | **Public Limited Company**                              | **Private Limited Company**                               |
+|-----------------------------|---------------------------------------------------------|-----------------------------------------------------------|
+| **Definition**              | A company that can sell shares to the public and        | A company that does not sell shares to the public and     |
+|                             |      is listed on a stock exchange.                     | is privately owned.                                       |
+|                             |                                                         |                                                           |                                                                               
+| **Ownership**               | Owned by shareholders, which can include the public.    | Owned by a small group of private individuals( family )   |
+|                             |                                                         |                                                           |    
+| **Number of Shareholders**  | Minimum: 7, No maximum limit.                           | Minimum: 2, Maximum: 200 (as per Companies Act 2013).     |
+|                             |                                                         |                                                           |
+| **Share Trading**           | Shares can be freely traded on the stock exchange.      | Shares cannot be publicly traded; transfer is restricted. |
+|                             |                                                         |                                                           |
+| **Capital Raising**         | Can raise capital from the public by issuing shares or  | Raises capital privately through personal networks        |
+|                             | debentures.                                             |     or private investors.                                 |
+|                             |                                                         |                                                           |            
+| **Regulation**              | Highly regulated with stricter rules and disclosures    | Less regulated, fewer disclosure requirements.            |
+|                             |                                                         |                                                           |     
+| **Board of Directors**      | Minimum: 3 directors.                                   | Minimum: 2 directors.                                     |
+|                             |                                                         |                                                           |     
+| **Name Suffix**             | Must include "Limited" in its name.                     | Must include "Private Limited" in its name.               |
+|                             |                                                         |                                                           |     
+| **Transparency**            | High transparency required                              | Moderate transparency                                     |
+|                             |    (mandatory audits and public reporting).             |     (internal audits, limited disclosure).                |     
+|                             |                                                         |                                                           |     
+| **Examples**                | Reliance Industries Ltd., Tata Steel Ltd.               | Flipkart Pvt. Ltd., Infosys Consulting Pvt. Ltd.          |
+
