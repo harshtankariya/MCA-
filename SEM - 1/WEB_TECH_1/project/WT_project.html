@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        .navbar {
+            background-color: #003366;
+        }
+        .navbar .nav-link {
+            color: white ;
+        }
+        .navbar .nav-link:hover {
+            color: #ffcc00 ; 
+        }
+
+        
+        body {
+            background-color: #f4f4f9;
+            color: #333333; 
+        }
+
+        
+        .main {
+            background-color: #00509e; 
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .main h1 {
+            font-size: 3rem;
+        }
+        .main p {
+            font-size: 1.2rem;
+        }
+
+        
+        #about {
+            background-color: #ffcc00; 
+            color: #333333;
+        }
+
+        
+        #projects {
+            background-color: #006BFF; 
+            color: white;
+        }
+
+        .projects .card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects .card-body {
+            background-color: white; 
+            color: #333; 
+        }
+
+        
+        #contact {
+            background-color: #00509e; 
+            color: white;
+        }
+
+       
+        footer {
+            background-color: #003366; 
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="file:///D:/MCA/project/login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main section -->
+    <section class="main">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Showcasing my work and skills</p>
+            <a href="#projects" class="btn btn-warning text-dark">View Projects</a>
+        </div>
+    </section>
+
+    <!-- about Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center">About Me</h2>
+            <p class="text-center">I am a passionate developer with expertise in modern web development. I love solving problems and building amazing applications.</p>
+        </div>
+    </section>
+
+    <!-- project Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="text-center text-white">Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1</h5>
+                            <p class="card-text">Description of Project 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Project 2">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Project 2</h5>
+                            <p class="card-text">Description of Project 2.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 3</h5>
+                            <p class="card-text">Description of Project 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contact Me</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control border-2 shadow-sm" id="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control border-2 shadow-sm" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control border-2 shadow-sm" id="message" rows="3" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning text-dark">Send</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p> My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

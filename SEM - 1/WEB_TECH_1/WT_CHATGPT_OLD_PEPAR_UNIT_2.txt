@@ -1,0 +1,334 @@
+[question_BANK]
+_________________________________________________________________________________________________________________________________________________________________________
+ explain me website createtion planing :-
+    1.Define Your Purpose
+
+        What is your website for? (e.g., personal blog, business, e-commerce)
+        Who is your target audience?
+
+    2. Plan Your Content
+
+        Decide what pages you need (e.g., Home, About Us, Contact, Products).
+        Write the text, choose images, and plan videos or other media.
+
+    3. Choose a Domain Name
+
+        Pick a unique and memorable name for your website (e.g., www.yourname.com).
+
+    4. Select a Web Hosting Service
+
+        A hosting service stores your website and makes it accessible online.
+        Examples: Bluehost, Hostinger, or Google Cloud.
+
+    5. Design Your Website
+
+        DIY: Use website builders like Wix, WordPress, or Squarespace for simple drag-and-drop design.
+        Custom: Hire a web designer or use coding (HTML, CSS, JavaScript).
+
+    6. Build the Website
+
+        Add your content and arrange it on the pages.
+        Ensure the website is easy to navigate and visually appealing.
+
+    7. Make It Responsive
+
+        Test the site on mobile phones, tablets, and desktops to ensure it looks good everywhere.
+
+    8. Optimize for Search Engines (SEO)
+
+        Use keywords in your content to help people find your website on Google.
+        Add meta descriptions and alt text for images.
+
+    9. Test Your Website
+
+        Check links, forms, and features to ensure everything works correctly.
+        Fix any errors before launching.
+
+    10. Launch and Promote
+
+        Publish your site.
+        Share it on social media, tell friends, or use ads to attract visitors.
+
+    11. Maintain and Update
+
+        Regularly update your content.
+        Fix bugs and ensure the website stays secure.
+_________________________________________________________________________________________________________________________________________________________________________
+
+Explain CSS Variables.
+
+     also called Custom Properties, are reusable values you can define in CSS. 
+     They make your code cleaner and easier to maintain. Here's a simple explanation:
+
+     Define a Variable:
+
+        Use -- before a name to create a variable.
+        Define it inside a CSS rule, usually in the :root (the global scope for the whole website).
+
+        :root {
+            --main-color: blue;
+            --font-size: 16px;
+        }
+    Use the Variable:    
+        Use the var() function to insert the variable's value anywhere in your CSS.
+
+        body {
+            color: var(--main-color);
+            font-size: var(--font-size);
+        }
+_________________________________________________________________________________________________________________________________________________________________________
+
+Media queries:-
+
+    Media queries in CSS are used to make websites responsive, meaning they look good on different devices like phones, tablets, and desktops.
+    They allow you to apply specific styles depending on the screen size or device type
+
+How They Work:-
+
+    Check the Screen Size: Media queries check the width, height, or type of the user's screen.
+
+    Apply Styles: If the conditions are true, the styles inside the media query are applied.
+    
+    syntax:
+
+    @media (condition) {
+    /* CSS styles here */
+    }
+    
+    Examples:
+    /* Default styles for all devices */
+        body {
+            font-size: 16px;
+            background-color: white;
+        }
+
+        /* Change styles for screens smaller than 600px */
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+                background-color: lightgray;
+            }
+        }
+_________________________________________________________________________________________________________________________________________________________________________        
+
+Explain wild card selectors in CSS
+Wildcard selectors in CSS are used to target multiple elements at once, regardless of their specific tag, class, or ID.
+They’re like "catch-all" tools for applying styles.
+
+Types of Wildcard Selectors
+    Universal Selector (*):-
+
+        Targets all elements on the page
+        * {
+        margin: 0;
+        padding: 0;
+        }
+
+    Substring Attribute Selectors:-
+
+        These are used to target elements based on part of an attribute's value:
+
+        Contains ([attr*="value"])
+        Targets elements where the attribute contains a specific value.
+        Example:
+
+        [class*="btn"] {
+        background-color: blue;
+        }
+    Targets all elements with "btn" anywhere in the class (e.g., btn-primary, big-btn).
+
+    Starts With ([attr^="value"]):-
+
+        Targets elements where the attribute starts with a specific value.
+        Example:
+
+            [href^="https"] {
+            color: green;
+            }
+        Targets all links that start with https.
+
+    Ends With ([attr$="value"]):-
+
+        Targets elements where the attribute ends with a specific value.
+
+        Example:
+            [src$=".jpg"] {
+                border: 1px solid black;
+            }
+
+        Targets all images with a .jpg file extension.
+_________________________________________________________________________________________________________________________________________________________________________
+ 
+ pseudo-class:-
+
+    A pseudo-class in CSS is a keyword that adds special styles to an element based on its state or position.
+    It lets you style elements without needing extra HTML or JavaScript.
+    
+    How Pseudo-Classes Work:
+
+        They are written with a colon : before the keyword.
+    Example:
+       
+    element:pseudo-class {
+        /* styles here */
+    }
+
+    * Common Pseudo-Classes: * 
+    1. :hover :-
+
+        Styles an element when the user points (hovers) over it with a mouse.
+
+        button:hover {
+            background-color: blue;
+            color: white;
+        }
+
+    2. :focus :-
+
+        Styles an element when it’s focused (clicked or tabbed into).
+
+        input:focus {
+            border-color: green;
+        }
+        When a user clicks or tabs into a text field, the border turns green.
+    
+    3. :nth-child()    
+        Styles specific child elements based on their order.
+
+        li:nth-child(2) {
+            color: red;
+        }
+        
+    4. :first-child and :last-child
+
+        Styles the first or last child of a parent.
+
+        p:first-child {
+            font-weight: bold;
+        }
+        
+    5. :not()
+
+    Styles all elements except the ones specified.
+
+    div:not(.highlight) {
+        background-color: gray;
+    }
+        All divs except those with the class highlight get a gray background.
+    
+    6. :checked
+
+    Styles checkboxes or radio buttons that are selected.
+
+    input:checked {
+        outline: 2px solid blue;
+    }
+
+    7. :before and :after
+
+        Insert content before or after an element.
+
+        h1:before {
+        content: "🌟 ";
+    }
+
+_________________________________________________________________________________________________________________________________________________________________________
+
+ OLD PEPAR 
+[ C ] :- Explain <table> tag with the rowspan, colspan, cellspacing and cellpadding attributes. Write HTML code to print following table
+
+<table border="1" cellspacing="0" >
+    <tr>
+        <td rowspan="2"></th>
+        <td colspan="2">average</th>
+        <td rowspan="2">other category</th>
+    </tr>
+    <tr>
+        <td>height</th>
+        <td>weight</th>
+    </tr>
+    <tr>
+        <td>males</td>
+        <td>1.9</td>
+        <td>0.003</td>
+        <td>yyy</td>
+    </tr>
+    <tr>
+        <td>females</td>
+        <td>1.7</td>
+        <td>0.002</td>
+        <td>xxx</td>
+    </tr>
+</table>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Explain the types of CSS and Write an HTML snippet with CSS for following effects.
+    1.link: after visited red color and before visited blue color.
+    2.table with odd rows pink and even rows blue color.
+    3.Text color-green, Text-indentation-2cm, Text case-uppercase.
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Effects</title>
+    <style>       
+        a:link { color: blue; }       /* Before visited */
+        a:visited { color: red; }    /* After visited */
+
+        /* 2. Table Row Colors */
+        table {
+            width: 50%;
+            border-collapse: collapse;
+      
+        }
+        table th, table td {
+      border: 1px solid black;      
+            padding: 8px;
+            text-align: center;
+        }
+        table tr:nth-child(odd) { background-color: pink; }  /* Odd rows */
+        table tr:nth-child(even) { background-color: blue; } /* Even rows */
+
+        /* 3. Text Styles */
+        .custom-text {
+            color: green;           /* Text color */
+            text-indent: 2cm;       /* Text indentation */
+            text-transform: uppercase; /* Text case */
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. Link Example -->
+   
+    <a href="https://www.example.com">Visit Example</a>
+
+    <!-- 2. Table Example -->
+    <h2>Table Example</h2>
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>Row 1</td>
+            <td>Data 1</td>
+        </tr>
+        <tr>
+            <td>Row 2</td>
+            <td>Data 2</td>
+        </tr>
+        <tr>
+            <td>Row 3</td>
+            <td>Data 3</td>
+        </tr>
+    </table>    
+    <h2>Text Example</h2>
+    <p class="custom-text">This is an example of custom styled text.</p>
+</body>
+</html>
+
+

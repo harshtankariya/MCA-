@@ -1,0 +1,1269 @@
+_________________________________________________________________________________________________________________________________________________________________________
+popup box :-
+----------
+ 1. alert:- 
+ =========>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Alert</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  alert("I am an alert box!");
+}
+</script>
+</body>
+</html>
+2. confirm box:-
+===============
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Confirm Box</h2>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Press a button!")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+</body>
+</html>
+
+3.prompt box :-
+===============
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Prompt</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text;
+  let person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
+_________________________________________________________________________________________________________________________________________________________________________
+array:-
+
+    An array in JavaScript is like a list that can hold multiple values in a single variable.
+
+Key Points:
+
+    Stores multiple items: You can store numbers, strings, objects, or even other arrays in it.
+
+    Ordered: Each item in the array has a specific position (called an index) starting from 0.
+
+    Flexible: You can add, remove, or modify items easily.
+
+    EXAMPLE :- 
+
+    NOTE :- you can create empty array in js : ->     let arrayName = []; // Create an empty array
+    
+        // Create an array
+        let fruits = ["apple", "banana", "cherry"];
+
+        // Access items
+        console.log(fruits[0]); // Output: "apple" (index 0)
+
+        // Add a new item
+        fruits.push("orange"); // ["apple", "banana", "cherry", "orange"]
+
+        // Remove the last item
+        fruits.pop(); // ["apple", "banana", "cherry"]
+
+        // Change an item
+        fruits[1] = "blueberry"; // ["apple", "blueberry", "cherry"]
+
+        // Check the length of the array
+        console.log(fruits.length); // Output: 3
+
+
+array method :-> 
+
+    push(): Adds one or more elements to the end of the array.
+
+    pop(): Removes the last element from the array.
+
+    unshift(): Adds one or more elements to the beginning of the array.
+
+    shift(): Removes the first element from the array.
+
+    sort(): Sorts the elements of an array in place.
+
+    reverse(): Reverses the order of elements in an array.
+
+    join(): Joins elements of the array into a string with a specified separator.
+
+    splice(): Removes, replaces, or adds elements to the array.
+
+    slice(): Returns a shallow copy of a portion of the array.
+
+    includes(): Checks if an array contains a specific value.
+
+    indexOf(): Returns the first index of a value, or -1 if not found.
+
+    find(): Returns the first element that satisfies a condition.
+
+    every(): Checks if all elements pass a test.
+
+    some(): Checks if at least one element passes a test
+
+    forEach(): Executes a callback function for each element.
+
+    map(): Creates a new array by applying a function to each element.
+
+    filter(): Creates a new array with elements that pass a test.
+
+    reduce(): Reduces an array to a single value by executing a reducer function.
+_________________________________________________________________________________________________________________________________________________________________________
+[ U D F ] :-
+    
+    A user-defined function in JavaScript is a custom function that you create to perform a specific task.
+    Think of it as a mini-program you can write and reuse whenever needed.
+
+
+    Key Points:
+
+        Reusable: Write the code once and use it multiple times.
+
+        Defined by the user: You decide the name and the task it performs.
+
+        Takes inputs (optional): Can accept data (called parameters) to work with.
+
+        Gives output (optional): Can return a result.
+
+    syntax :- 
+
+        function functionName(parameters) {
+          // Code to execute
+          return result; // (optional)
+        }
+
+    Examples:-    
+
+        function sayHello() {
+          console.log("Hello, World!");
+        }
+
+        // Call the function
+        sayHello(); // Output: Hello, World!
+_________________________________________________________________________________________________________________________________________________________________________
+
+Q_3 :- Demonstrate types of pop-up box with example
+
+JavaScript provides three main types of pop-up boxes to interact with users:
+
+    
+    1. Alert Box: Displays a simple message to the user.
+    
+    2. Confirm Box: Asks the user to confirm or cancel an action.
+    
+    3. Prompt Box: Asks the user to input some information.
+
+1. Alert Box :-
+
+    Used to show a simple message or warning. The user can only close it by clicking OK.    
+
+    Examples:- alert("This is an alert box!");
+    * When executed, it will show a pop-up with the message: "This is an alert box!"
+
+2. Confirm Box: -
+    
+    Used to ask the user to confirm or cancel an action. Returns true if the user clicks OK and false if the user clicks Cancel.
+    
+    Examples:-
+
+    let isConfirmed = confirm("Do you want to proceed?");
+    if (isConfirmed) {
+      console.log("User clicked OK!");
+    } else {
+      console.log("User clicked Cancel!");
+    }
+3. Prompt Box:-
+
+    Used to ask the user for input. Returns the entered value if the user clicks OK or null if the user clicks Cancel.
+
+    Examples:-
+
+    let userName = prompt("What is your name?");
+    if (userName) {
+      console.log("Hello, " + userName + "!");
+    } else {
+      console.log("User did not enter a name.");
+    }
+
+    How They Look and Work:
+        
+        Alert:
+        
+            Simple message.
+
+            No user input, just click OK.
+        
+        Confirm:
+        
+            Displays a message with OK and Cancel options.
+
+            Lets you decide based on the user's choice.
+        
+        Prompt:
+        
+            Displays a message and a text box for user input.
+_________________________________________________________________________________________________________________________________________________________________________
+
+[Q_BANK_B ] :-
+
+    Describe types of java script with syntax.
+
+        JavaScript can be classified into different types based on how it is used in a project. These types are not official but are ways to categorize JavaScript usage and syntax.
+
+        1. Inline JavaScript
+        JavaScript code is directly written inside an HTML element's attribute, such as onclick, onmouseover, etc.
+
+        syntax:- 
+            <button onclick="alert('Button clicked!')">Click Me</button>
+    
+    2. Internal JavaScript
+
+    JavaScript code is written inside a <script> tag in the HTML file.
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Internal JavaScript</title>
+          <script>
+            function sayHello() {
+              alert("Hello, World!");
+            }
+          </script>
+        </head>
+        <body>
+          <button onclick="sayHello()">Click Me</button>
+        </body>
+        </html>
+        
+        3. External JavaScript
+
+        JavaScript code is written in a separate .js file and linked to an HTML file using the <script> tag.
+        { html file }
+        <!DOCTYPE html>
+        <html>
+        <head>                                                                                  { script.js }
+          <title>External JavaScript</title>                                                    function sayHello() {
+           <script src="script.js"></script>                                                        alert("Hello, from External JavaScript!");
+                                                                                                 }
+        </head>
+        <body>
+          <button onclick="sayHello()">Click Me</button>
+        </body>
+        </html>                                                                                          
+_________________________________________________________________________________________________________________________________________________________________________
+
+[ math function ] :-
+
+    JavaScript provides a Math object with many useful functions for performing mathematical operations.
+    Below are the common Math functions combined into a single example for better understanding.
+
+Common Math Functions:
+
+    Math.abs(x): Returns the absolute value of x.
+    Math.ceil(x): Rounds x up to the nearest integer.
+    Math.floor(x): Rounds x down to the nearest integer.
+    Math.round(x): Rounds x to the nearest integer.
+    Math.max(x1, x2, ...): Returns the largest value.
+    Math.min(x1, x2, ...): Returns the smallest value.
+    Math.pow(x, y): Returns x raised to the power y (e.g., x^y).
+    Math.sqrt(x): Returns the square root of x.
+    Math.random(): Returns a random number between 0 (inclusive) and 1 (exclusive).
+    Math.trunc(x): Removes the decimal part of x.
+    Math.PI: Returns the value of π (3.14159...).
+    Math.sin(x): Returns the sine of x (in radians).
+    Math.cos(x): Returns the cosine of x (in radians).
+    Math.tan(x): Returns the tangent of x (in radians).
+    Math.log(x): Returns the natural logarithm (base e) of x.
+
+// Example values
+let num = -4.7;
+let values = [3, 8, -2, 15, 7];
+
+
+ // Math functions in action
+
+console.log("Absolute value:", Math.abs(num)); // 4.7
+
+console.log("Ceil value:", Math.ceil(num)); // -4
+
+console.log("Floor value:", Math.floor(num)); // -5
+
+console.log("Rounded value:", Math.round(num)); // -5
+
+console.log("Maximum value:", Math.max(...values)); // 15
+
+console.log("Minimum value:", Math.min(...values)); // -2
+
+console.log("Power (2^3):", Math.pow(2, 3)); // 8
+
+console.log("Square root of 16:", Math.sqrt(16)); // 4
+
+console.log("Random number (0 to 1):", Math.random());
+
+console.log("Truncated value:", Math.trunc(num)); // -4
+
+console.log("PI value:", Math.PI); // 3.14159...
+
+console.log("Sine of PI/2:", Math.sin(Math.PI / 2)); // 1
+
+console.log("Cosine of 0:", Math.cos(0)); // 1
+
+console.log("Tangent of PI/4:", Math.tan(Math.PI / 4)); // 1
+
+console.log("Natural Logarithm of e:", Math.log(Math.E)); // 1
+
+_________________________________________________________________________________________________________________________________________________________________________
+user-defined object:-
+
+A user-defined object in JavaScript is a custom object that you create to store related data and behavior in one place.
+Think of it as a collection of properties (data) and methods (functions) designed by you.
+
+1. Using Object Literal
+    This is the simplest way to define an object.
+
+    let objectName = {
+      property1: value1,
+      property2: value2,
+      method1: function() {
+        // Code for the method
+      }
+    };
+-------------------------- Example :- ------------ 
+    let person = {
+      name: "Harsh",
+      age: 25,
+      greet: function() {
+        console.log("Hello, my name is " + this.name);
+      }
+    };
+
+    // Access properties and call methods
+    console.log(person.name); // Output: Harsh
+    console.log(person.age); // Output: 25
+    person.greet(); // Output: Hello, my name is Harsh
+
+2. Using Constructor Function
+
+    You can create a "blueprint" for objects using a constructor function.
+
+    syntax:- 
+    function ObjectName(property1, property2) {
+      this.property1 = property1;
+      this.property2 = property2;
+      this.method1 = function() {
+        // Code for the method
+      };
+    }
+
+-------------------------- Example :- ----------------------
+
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+      this.greet = function() {
+        console.log("Hello, my name is " + this.name);
+      };
+    }
+
+    // Create new objects using the constructor
+    let person1 = new Person("Harsh", 25);
+    let person2 = new Person("Tankariya", 30);
+
+    console.log(person1.name); // Output: Harsh
+    person2.greet(); // Output: Hello, my name is Tankariya
+_________________________________________________________________________________________________________________________________________________________________________
+Demonstrate following two pattern using loop in java script
+*
+**
+***
+****
+*****
+// Loop through 5 rows
+for (let i = 1; i <= 5; i++) {
+  let row = '';  // Start with an empty string for each row
+  for (let j = 1; j <= i; j++) {
+    row += '*';  // Add a star for each column
+  }
+  console.log(row);  // Print the row
+}
+--------------------------------------------------------
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+
+// Loop for rows
+let height = 5; // Height of the pyramid
+
+for (let i = 1; i <= height; i++) {
+  let row = ''; 
+  
+  // Add spaces before the stars
+  for (let j = 1; j <= height - i; j++) {
+    row += ' '; // Space before stars
+  }
+  
+  // Add stars for the pyramid
+  for (let k = 1; k <= (2 * i - 1); k++) {
+    row += '*'; // Stars for each row
+  }
+  
+  console.log(row); // Print each row
+}
+_________________________________________________________________________________________________________________________________________________________________________
+
+_________________________________________________________________________________________________________________________________________________________________________
+jQuery is a popular JavaScript library that makes it easier to work with HTML, CSS, and JavaScript in web development.
+It simplifies tasks like DOM manipulation, event handling, animation, and AJAX requests.
+
+    Why Use jQuery?
+            
+            Simplifies JavaScript: It makes JavaScript code shorter and easier to write.
+            
+            Cross-Browser Compatibility: jQuery handles differences between browsers, so you don't have to worry about them.
+            
+            Powerful Features: It comes with built-in methods for animation, DOM manipulation, and working with events.
+
+    Basic Concepts:
+    
+        DOM Manipulation: Easily select and modify HTML elements.
+    
+        Event Handling: Bind events like clicks, mouse movements, etc., to elements.
+    
+        AJAX: Perform asynchronous HTTP requests without refreshing the page.
+    
+        Animations: Create animations like hiding, showing, and sliding elements.
+
+Example 1: Select and Modify HTML Elements :- 
+
+    $('#myDiv').text('Hello, World!');
+
+    Example 2: Event Handling (Click Event) :-
+
+    $('#myButton').click(function() {
+      alert('Button clicked!');
+    });
+
+Example 3: Animations (Hide and Show)
+    
+    $('#myDiv').hide();
+_________________________________________________________________________________________________________________________________________________________________________
+=========================================================================================================================================================================
+[ D O M ]
+Explain Document Object Model.
+
+The Document Object Model (DOM) in JavaScript is a programming interface for web documents. It allows developers to interact with and manipulate the structure, style,
+and content of a web page dynamically.
+
+  Document: Your web page (HTML).
+
+
+    Object: Each part of the page (like headings, paragraphs, images, etc.) is represented as an object.
+
+    Model: These objects are structured in a tree-like format, where each part of the page is a node in the tree.
+
+Using the DOM, you can:
+
+
+    Access elements: Get specific parts of your webpage (e.g., document.getElementById("title")).
+
+    Change content or styles: Update text, images, or CSS (e.g., element.style.color = "red";).
+
+    React to events: Add interactivity like button clicks (e.g., button.addEventListener("click", doSomething);).
+
+    In short, the DOM makes your webpage dynamic and interactive instead of being just static content.
+
+---------
+
+The Document Object Model (DOM) is like a blueprint of your web page that JavaScript uses to interact with it. It organizes all the elements of your web page into 
+a tree structure, where each part of the page (like headings, paragraphs, images) becomes a "node" in the tree.
+
+Example :-
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>My Web Page</title>
+      </head>
+      <body>
+        <h1 id="header">Welcome to My Page</h1>
+        <p class="content">This is a paragraph.</p>
+        <button onclick="changeText()">Click Me</button>
+
+        <script>
+          // JavaScript to interact with the DOM
+          function changeText() {
+            // Access the h1 element using its ID and change its content
+            document.getElementById("header").innerText = "You clicked the button!";
+          }
+        </script>
+      </body>
+    </html>
+_________________________________________________________________________________________________________________________________________________________________________
+
+[OLD_PAPER_Q_4] :- Demonstrate getElementByID() using html form.
+
+simple demonstration of getElementById() using an HTML form. We'll use it to fetch user input and display it on the page.
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>getElementById Example</title>
+      </head>
+      <body>
+        <h2>Enter Your Name</h2>
+
+        <!-- Simple Form -->
+        <form>
+          <label for="nameInput">Name:</label>
+          <input type="text" id="nameInput" placeholder="Type your name here" />
+          <button type="button" onclick="showName()">Submit</button>
+        </form>
+
+        <!-- Area to display the result -->
+        <p id="output"></p>
+
+        <script>
+          // JavaScript function to use getElementById
+          function showName() {
+            // Get the value of the input field
+            let name = document.getElementById("nameInput").value;
+
+            // Display the name in the <p> tag
+            document.getElementById("output").innerText = "Hello, " + name + "!";
+          }
+        </script>
+      </body>
+    </html>
+_________________________________________________________________________________________________________________________________________________________________________
+
+Demonstrate login form validation using javascript. :-
+
+  login form with simple validation using JavaScript. 
+  The script checks if the username and password fields are filled out before allowing submission. 
+  If they're empty, it shows an error message.
+
+      <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Login Form Validation</title>
+      </head>
+      <body>
+        <h2>Login Form</h2>
+
+        <!-- Login Form -->
+        <form onsubmit="return validateForm()">
+          <label for="username">Username:</label>
+          <input type="text" id="username" placeholder="Enter username" /><br><br>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" placeholder="Enter password" /><br><br>
+
+          <button type="submit">Login</button>
+        </form>
+
+        <!-- Error message -->
+        <p id="error" style="color: red;"></p>
+
+        <script>
+          // JavaScript function to validate the form
+          function validateForm() {
+            // Get the values of username and password fields
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            // Check if either field is empty
+            if (username === "" || password === "") {
+              // Show an error message
+              document.getElementById("error").innerText = "Both fields are required!";
+              return false; // Prevent form submission
+            }
+
+            // Clear the error message if validation passes
+            document.getElementById("error").innerText = "";
+            alert("Login successful!");
+            return true; // Allow form submission
+          }
+        </script>
+      </body>
+    </html>
+_________________________________________________________________________________________________________________________________________________________________________
+
+explain me callback in javascript  :-
+
+A callback in JavaScript is a function that you pass into another function as an argument. 
+that function (the one receiving the callback) can "call back" the function you passed in when it needs to.
+
+Think of it like asking someone to do a task and saying, "When you're done, call me back so I can do the next thing."
+
+Example:- 
+
+    function processUserInput(callback) {
+      let name = prompt("Please enter your name:");
+      callback(name); // Call the callback function with the name
+    }
+
+    function greet(name) {
+      console.log("Hello, " + name);
+    }
+
+    // Passing greet as a callback
+    processUserInput(greet);
+    
+    
+    ++ real world Example  ++
+
+    function sayHello() {
+        console.log("Hello after 2 seconds!");
+      }
+
+      // Passing sayHello as a callback to setTimeout
+      setTimeout(sayHello, 2000); // Wait 2 seconds, then call sayHello
+_________________________________________________________________________________________________________________________________________________________________________
+var, let, and const :-
+
+  var, let, and const are used to declare variables. Each has different rules about how and where you can use them      
+
+     --------------------------------------------------- 
+      Use const by default for values that don’t change.
+      
+      Use let for variables whose value will change.
+      
+      Avoid var unless working with legacy code.
+    -----------------------------------------------------
+
+      1. var (Old way, less preferred now)
+
+      Scope: var is function-scoped. If you declare it inside a function, it’s only available there, but if declared outside, it’s globally available.
+
+      Re-declaration: You can re-declare the same variable without errors.
+
+      Hoisting: Variables declared with var are "hoisted" to the top of their scope but remain undefined until assigned a value.
+
+      Example :-
+
+      var x = 5;
+      var x = 10; // Re-declaration is allowed
+      console.log(x); // Output: 10
+
+      function testVar() {
+        var y = 20; // Scoped to the function
+        console.log(y);
+      }
+      testVar();
+      console.log(y); // Error: y is not defined
+    
+    
+    2. let (Preferred for variable declarations)
+    
+    Scope: let is block-scoped, meaning it’s only available within the {} block where it's defined.
+    
+    Re-declaration: You cannot re-declare a let variable in the same scope.
+    
+    Hoisting: let is also hoisted, but you cannot use it before it's declared.
+    
+    example:-
+    let a = 5;
+      a = 10; // You can update the value
+      console.log(a); // Output: 10
+
+      if (true) {
+        let b = 20; // Scoped to this block
+        console.log(b); // Output: 20
+      }
+      // console.log(b); // Error: b is not defined
+
+      3. const (For constants)
+
+      Scope: const is block-scoped like let.
+
+      Re-declaration: You cannot re-declare or reassign a const variable.
+
+      Value: The value of a const variable must be assigned when it’s declared and cannot change (for primitive values).
+
+      Mutability: If the value is an object or array, you can still modify its properties or elements.
+      Example:-
+
+      const PI = 3.14;
+      // PI = 3.15; // Error: Assignment to constant variable
+
+      const numbers = [1, 2, 3];
+      numbers.push(4); // You can modify the array
+      console.log(numbers); // Output: [1, 2, 3, 4]
+
+
+| Feature           | var                     | let                     | const                   |
+|--------------------|------------------------|-------------------------|-------------------------|
+| **Scope**          | Function-scoped        | Block-scoped            | Block-scoped            |
+| **Re-declaration** | Allowed                | Not allowed             | Not allowed             |
+| **Hoisting**       | Yes ( `undefined`)     | Yes                     | Yes                     |
+| **Reassignment**   | Allowed                | Allowed                 | Not allowed             |
+_________________________________________________________________________________________________________________________________________________________________________
+
+1. this (Keyword) :-
+
+    this refers to the object that is calling the function.
+
+    Its value depends on how and where the function is called.
+
+
+Here’s a simple explanation of the JavaScript concepts you listed, with examples for each:
+
+1. this (Keyword)
+this refers to the object that is calling the function.
+Its value depends on how and where the function is called.
+
+Example:
+
+const person = {
+      name: "Harsh",
+      greet: function () {
+        console.log("Hello, " + this.name); // `this` refers to `person`
+      },
+    };
+
+    person.greet(); // Output: Hello, Harsh
+
+2. Arrow Function:-
+
+A shorter way to write functions.
+Does not have its own this, so it uses this from the surrounding scope.
+
+examples:-
+
+    const add = (a, b) => a + b; // Arrow function
+
+    console.log(add(2, 3)); // Output: 5
+
+3. Object
+An object is a collection of key-value pairs (properties and methods).
+
+examples :-
+
+const car = {
+  brand: "Toyota",
+  model: "Corolla",
+  start: function () {
+    console.log("Car started!");
+  },
+};
+
+console.log(car.brand); // Output: Toyota
+car.start(); // Output: Car started!
+
+4. Array Function   [  NOTE :- I.M.P  ]
+    Common functions for arrays like map, filter, and reduce make it easy to manipulate arrays.
+
+    example:-
+
+    const numbers = [1, 2, 3, 4, 5];
+
+      // Double each number using `map`
+      const doubled = numbers.map((num) => num * 2);
+      console.log(doubled); // Output: [2, 4, 6, 8, 10]
+
+      // Filter numbers greater than 2
+      const filtered = numbers.filter((num) => num > 2);
+      console.log(filtered); // Output: [3, 4, 5]
+
+5. Spread (...) :-
+
+    Used to spread elements of an array or properties of an object.
+    
+    Example:-
+
+    // Spread with arrays
+    const arr1 = [1, 2, 3];
+    const arr2 = [...arr1, 4, 5];
+    console.log(arr2); // Output: [1, 2, 3, 4, 5]
+
+    // Spread with objects
+    const obj1 = { a: 1, b: 2 };
+    const obj2 = { ...obj1, c: 3 };
+    console.log(obj2); // Output: { a: 1, b: 2, c: 3 }
+
+6. Class :-
+
+    Classes are a blueprint for creating objects. They encapsulate data and methods.
+
+    Example:-
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+      }
+    }
+
+    const person1 = new Person("Harsh", 25);
+    person1.greet(); // Output: Hello, my name is Harsh and I am 25 years old.
+
+
+Summary:
+
+    
+   1. this: Refers to the object calling the function.
+    
+   2. Arrow Function: Shorter syntax; doesn’t bind its own this.
+    
+   3. Object: Collection of properties and methods.
+    
+   4. Array Functions: Methods like map, filter, and reduce for manipulating arrays.
+    
+   5. Spread (...): Expands arrays or objects.
+    
+   6. Class: A template for creating objects with specific properties and methods.
+
+
+   _________________________________________________________________________________________________________________________________________________________________________
+   // LEB PROGRAMS 
+
+      factorial -------->
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial Calculator</title>
+</head>
+<body>   
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="calculateFactorial()">Calculate Factorial</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateFactorial() {
+            // Get the number from the input field
+            let number = parseInt(document.getElementById("numberInput").value);
+
+            // Initialize factorial to 1
+            let factorial = 1;
+
+            // Calculate factorial using a loop
+            for (let i = 1; i <= number; i++) {
+                factorial *= i;
+            }
+
+            // Display the result
+            document.getElementById("result").innerText = 
+                "The factorial of "  + factorial;
+        }
+    </script>
+</body>
+</html>
+ 
+_________________________________________________________________________________________________________________________________________________________________________
+
+[ Q_BANK_C] :-
+
+// Function to calculate factorial
+
+function factorial(num) {
+  if (num < 0) {
+    return "Factorial is not defined for negative numbers.";
+  }
+  let result = 1;
+  for (let i = 1; i <= num; i++) {
+    result *= i; // Multiply result by the current number
+  }
+  return result;
+}
+
+// Input and Output
+let number = 5; // Change this number to test
+console.log("Factorial of " + number + " is: " + factorial(number));
+
+Example:
+    If number = 5:
+
+    The loop calculates: 1 × 2 × 3 × 4 × 5 = 120.
+    Output: "Factorial of 5 is: 120".
+
+_________________________________________________________________________________________________________________________________________________________________________
+[2] Write a program to find largest number from the given three number using java script
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Largest Number</title>
+</head>
+<body>
+  <p id="result"></p>
+
+  <script>
+    function findLargest(a, b, c) {
+      let largest = a; // Assume the first number is the largest
+      if (b > largest) {
+        largest = b; // Update if the second number is larger
+      }
+      if (c > largest) {
+        largest = c; // Update if the third number is larger
+      }
+      return largest;
+    }
+
+    // Input
+    let num1 = 10, num2 = 250, num3 = 15;
+
+    // Output
+    let largestNumber = findLargest(num1, num2, num3);
+    document.getElementById("result").innerText =  largestNumber;
+  </script>
+</body>
+</html>
+
+_________________________________________________________________________________________________________________________________________________________________________
+// prime number with range 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Numbers Finder</title>
+</head>
+<body> 
+
+    <!-- Input fields -->
+    
+    <input type="number" id="startNumber" placeholder="Enter start number">
+    <br><br>
+    
+    <input type="number" id="endNumber" placeholder="Enter end number">
+    <br><br>
+
+    <!-- Button to find prime numbers -->
+    <button onclick="findPrimes()">Find Primes</button>
+
+    <!-- Display the result -->
+    <p id="result"></p>
+
+    <script>
+        function findPrimes() {
+            // Get input values
+            let start = parseInt(document.getElementById("startNumber").value);
+            let end = parseInt(document.getElementById("endNumber").value);
+            let primes = []; // Array to store prime numbers
+
+            // Function to check if a number is prime
+            function isPrime(num) {
+                if (num < 2) return false; // Numbers less than 2 are not prime
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) return false; // Divisible by other numbers
+                }
+                return true;
+            }
+
+            // Loop through the range and find primes
+            for (let i = start; i <= end; i++) {
+                if (isPrime(i)) {
+                    primes.push(i); // Add prime number to the array
+                }
+            }
+
+            // Display the result
+            document.getElementById("result").innerText =  primes
+        }
+    </script>
+</body>
+</html>
+_________________________________________________________________________________________________________________________________________________________________________
+// fibonachi 
+
+<body>
+   
+    <!-- Input field -->
+    <input type="number" id="terms" >
+    <button onclick="generateFibonacci()">Generate</button>
+
+    <!-- Display the result -->
+    <p id="result"></p>
+
+    <script>
+        function generateFibonacci() {
+            let num = parseInt(document.getElementById("terms").value); 
+            
+            let a = 0, b = 1, series = ""; // Start with 0 and 1
+            
+            for (let i = 0; i < num; i++) {
+                series += a; // Add current number to series
+                let next = a + b; // Calculate the next number
+                a = b; // Update a
+                b = next; // Update b
+            }
+
+            document.getElementById("result").innerText = "Fibonacci Series: " + series;
+        }
+    </script>
+</body>
+_________________________________________________________________________________________________________________________________________________________________________
+// palindrom 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <!-- Input field -->
+    <input type="number" id="number" >
+    <button onclick="checkPalindrome()">Check</button>
+ <!-- Display the result -->
+    <p id="result"></p>
+
+    <script>
+        function checkPalindrome() {
+        
+            // Get the number from the user
+            let num = document.getElementById("number").value;
+            let reversedNum = num.split("").reverse().join(""); // Reverse the number
+
+            // Check if the number is equal to its reverse
+            if (num == reversedNum) {
+                document.getElementById("result").innerText = num + " is a palindrome.";
+            } else {
+                document.getElementById("result").innerText = num + " is not a palindrome.";
+            }
+        }
+    </script>
+</body>
+</html>
+-----------------------------------------------------------
+LEB 5 // DEME BOOTSTRAP 
+---------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Layout Example</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="row">
+            <div class="col-3 border border-dark text-center p-3">Logo Here</div>
+            <div class="col-9 border border-dark d-flex align-items-center justify-content-around">
+                <a href="#" class="text-decoration-none">Home</a>
+                <a href="#" class="text-decoration-none">About</a>
+                <a href="#" class="text-decoration-none">Contact</a>
+            </div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="row mt-3">
+            <!-- Left Sidebar -->
+            <div class="col-3 border border-dark">
+                <button class="btn btn-outline-dark w-100 my-2">RESULT</button>
+                <button class="btn btn-outline-dark w-100 my-2">APPLY</button>
+                <button class="btn btn-outline-dark w-100 my-2">PLACEMENT</button>
+                <button class="btn btn-outline-dark w-100 my-2">RECRUITMENT</button>
+                <button class="btn btn-outline-dark w-100 my-2">NEWS</button>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-9 border border-dark">
+                <!-- Upper Section -->
+                <div class="row mb-3">
+                    <div class="col-6 border border-danger" style="height: 100px;"></div>
+                    <div class="col-6 border border-danger" style="height: 100px;"></div>
+                </div>
+                <!-- Lower Section -->
+                <div class="row">
+                    <div class="col-4 border border-danger" style="height: 100px;"></div>
+                    <div class="col-4 border border-danger" style="height: 100px;"></div>
+                    <div class="col-4 border border-danger" style="height: 100px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+-----------------------------------------
+EXAM PEPAR 
+---------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Layout</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+       
+
+        <!-- Aside and Sections -->
+        <div class="row mt-3">
+            <div class="col-3 border border-dark text-center p-3">Aside</div>
+            <div class="col-9">
+                <div class="row">
+                 <div class="col-12 border border-dark text-center p-3">Header</div>
+                    <div class="col-6 border border-dark text-center p-3">Section</div>
+                    <div class="col-6 border border-dark text-center p-3">Section</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Article -->
+        <div class="row mt-3">
+            <div class="col-12 border border-dark text-center p-3">Article</div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="row mt-3">
+            <div class="col-12 border border-dark text-center p-3">Section</div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS (Optional for interactive features) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+---------------------------------------------------------------------
+FORM IN BOOTSTRAP 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4 text-center">Vaccination Form</h2>
+        <form>
+            <div class="mb-3 row">
+                <label for="firstName" class="col-sm-3 col-form-label">First Name</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="firstName">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="lastName" class="col-sm-3 col-form-label">Last Name</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="lastName">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="aadhaarNumber" class="col-sm-3 col-form-label">Aadhar Number</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="aadhaarNumber" >
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="vaccineName" class="col-sm-3 col-form-label">Vaccine Name</label>
+                <div class="col-sm-9">
+                    <select class="form-select" id="vaccineName">
+                        <option selected>Please Select Vaccine Name</option>
+                        <option value="covaxin">Covaxin</option>
+                        <option value="covishield">Covishield</option>
+                        <option value="sputnik">Sputnik</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="centerName" class="col-sm-3 col-form-label">Vaccination Center Name</label>
+                <div class="col-sm-9">
+                    <select class="form-select" id="centerName">
+                        <option selected>Please Select Vaccination Center Name</option>
+                        <option value="center1">Center 1</option>
+                        <option value="center2">Center 2</option>
+                        <option value="center3">Center 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="doseDate" class="col-sm-3 col-form-label">Date of Dose</label>
+                <div class="col-sm-9">
+                    <input type="date" class="form-control" id="doseDate">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="doseNumber" class="col-sm-3 col-form-label">Dose Number</label>
+                <div class="col-sm-9">
+                    <input type="number" class="form-control" id="doseNumber" >
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Default radio
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Default radio
+            </label>
+          </div>
+          
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Default checkbox
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+              Checked checkbox
+            </label>
+          </div>
+                          </div>
+                          
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary me-2">CLICK HERE</button>
+                <button type="reset" class="btn btn-secondary">CANCEL</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

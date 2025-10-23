@@ -1,0 +1,116 @@
+Draw and describe client-server architecture
+
+    Description of Client-Server Architecture in Simple Words:
+
+        Client: A device or application (like your smartphone, computer, or browser) that requests a service or data. 
+        For example, when you open a website, your browser acts as a client.
+
+        Server: A powerful computer or system that provides services, processes requests, and sends responses back to clients. 
+        For example, when you visit a website, the server sends the webpage to your browser.
+
+    Communication:
+
+        The client sends a request (e.g., "Give me this webpage").
+        The server processes the request and sends a response (e.g., "Here is the webpage").
+
+    Real-life Example: Imagine ordering food at a restaurant.
+
+        Client: You (placing an order).
+
+        Server: The kitchen staff (preparing and serving your order).
+
+        Communication: You request food, and they respond by serving it.
+________________________________________________________________________________________________________________________________________________________
+
+[ A ] Explain the Http Request Response mechanism.
+
+    The HTTP Request-Response Mechanism is the foundation of how communication happens over the web. Here's a simple explanation:
+
+       What is HTTP?
+        HTTP stands for Hypertext Transfer Protocol.
+        It is the protocol used for communication between a client (e.g., web browser) and a server (e.g., website host).
+
+    Step 1: Client Sends an HTTP Request
+
+        The client (like your web browser) sends a request to the server for a specific resource, such as a webpage, image, or file.
+
+        An HTTP request consists of:
+
+        URL: The address of the resource (e.g., https://example.com/home).
+
+        Method: What action to perform (e.g., GET to retrieve data or POST to send data).
+
+        Headers: Extra information like browser type, authentication, etc.
+
+        Body: Optional data sent with the request (used in methods like POST).
+
+    Step 2: Server Processes the Request
+
+        The server receives the request, processes it, and decides how to respond.
+
+        Example: If you request a webpage, the server fetches the content.
+
+    Step 3: Server Sends an HTTP Response
+
+        The server sends back an HTTP response to the client.
+
+        An HTTP response consists of:
+
+        Status Code: Indicates the result (e.g., 200 OK for success, 404 Not Found for missing resources).
+
+        Headers: Additional information about the response.
+
+        Body: The requested resource or error message.
+
+    Step 4: Client Processes the Response
+
+        The client (browser) processes the response, displaying the content or an error message.
+
+    3. Example
+
+        Request: When you type https://example.com in your browser:
+
+        Your browser sends a GET request to the server at example.com.
+
+        Response: The server responds with the requested webpage and sends it back to your browser
+
+________________________________________________________________________________________________________________________________________________________
+{ q _ bank no: 10 } Write the Difference between POST and GET methods.
+
+1. GET Method
+
+    Purpose: Used to retrieve data from the server (like searching or viewing content).
+
+    Data Visibility: Data is sent as part of the URL (e.g., example.com/page?name=John), so it is visible to everyone.
+
+    Data Size: Limited amount of data can be sent (URL length limit).
+    
+    Security: Less secure because data is exposed in the URL.
+
+    Use Case: For actions that do not affect server data, like search forms or navigation.
+
+2. POST Method
+
+    Purpose: Used to send data to the server (like submitting forms or uploading files).
+
+    Data Visibility: Data is sent in the body of the request, not in the URL, so it’s not visible in the address bar.
+
+    Data Size: No size limit for the data being sent.
+
+    Security: More secure than GET because the data isn’t exposed in the URL (but still needs encryption for sensitive data).
+
+    Use Case: For actions that modify server data, like creating accounts, logging in, or posting comments.
+
+[ simple :]
+
+Use GET for viewing/searching information.
+
+Use POST for sending sensitive or large amounts of data.
+
+| **Feature**       | **GET**                        | **POST**                       |
+|-------------------|--------------------------------|--------------------------------|
+| **Data Location** | Sent in the URL                | Sent in the request body       |
+| **Visibility**    | Visible in the URL             |Hidden(but can still be sniffed)|
+| **Data Size**     | Limited (URL length limit)     | No size limit                  |
+| **Use Case**      | Retrieve data                  | Submit or modify data          |
+| **Security**      | Less secure                    | More secure (with HTTPS)       |

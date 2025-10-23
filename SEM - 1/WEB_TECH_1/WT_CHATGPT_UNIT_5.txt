@@ -1,0 +1,83 @@
+
+what is gutter in bootstrap :-
+	gutter refers to the space between columns in a grid layout. It creates breathing room between the elements, ensuring that they don’t touch each other.
+
+	Bootstrap adds gutters between columns to make the layout look cleaner and more organized. 
+	These gutters are the spaces that separate the content in different columns, whether it's text, images, or other elements.
+
+	[ MORE READ PPT :- 16 ]
+_________________________________________________________________________________________________________________________________________________________________________
+ table :-
+
+		table is used to display data in a structured way using rows and columns. 
+		Bootstrap provides several built-in classes to make tables look better and more organized without needing custom styling.
+_________________________________________________________________________________________________________________________________________________________________________
+1. Typography:-  [ALL Typography READ ON THIS SITE :- https://getbootstrap.com/docs/5.0/content/typography/]
+     Typography in Bootstrap refers to the set of tools and classes provided by Bootstrap to style and format text on your web pages.
+	 It helps you manage fonts, sizes, colors, alignments, and other text-related properties easily without writing custom CSS.
+     
+     [Key Features of Typography in Bootstrap] ==> 
+     1.Headings (<h1> to <h6>)
+
+     
+     	Bootstrap provides classes to style headings (h1, h2, etc.) with appropriate font sizes and weights.
+     	You can also use .h1 to .h6 classes for headings without using heading tags.
+     
+     	<h1>Heading 1</h1>
+     	<p class="h2">Heading 2 styled text</p>
+     			Text Colors
+     
+     2. Change text color using classes like:
+     
+     		.text-primary (blue)
+     		.text-success (green)
+     		.text-danger (red)
+     		.text-warning (yellow)
+     		.text-info (teal)
+     		.text-dark, .text-light, .text-white, .text-muted, etc.
+     
+     		<p class="text-success">This is green text.</p>
+     		<p class="text-danger">This is red text.</p>
+     		Text Alignment
+     
+     3. Align text using classes like:
+     		.text-start (left-aligned)
+     		.text-center (center-aligned)
+     		.text-end (right-aligned)
+     
+     		<p class="text-center">This text is centered.</p>
+     		Font Size and Weight
+     
+     4. Adjust font size using classes:
+     		.fs-1 (largest) to .fs-6 (smallest)
+     		Adjust font weight using:
+     		.fw-bold (bold), .fw-normal (normal), .fw-light (light)
+     
+     		<p class="fs-3 fw-bold">Big bold text</p>
+     		Text Decoration
+     
+     5. Control underlines and strikethroughs using:
+     		.text-decoration-underline
+     		.text-decoration-line-through
+     		.text-decoration-none
+     
+     		<p class="text-decoration-underline">This text is underlined.</p>
+     		Text Transform
+     
+     6. Transform text using:
+     		.text-uppercase (all uppercase)
+     		.text-lowercase (all lowercase)
+     		.text-capitalize (capitalize each word)
+     
+     		<p class="text-uppercase">uppercase text</p>
+     7.Responsive Typography
+     
+     		Control text responsiveness using classes like .fs-sm, .fs-md, .fs-lg for small, medium, and large screens.
+     
+2. Interaction Utility Classes 
+            Interaction Utility Classes in Bootstrap are a set of predefined classes that let you easily control how elements interact with user actions,
+            like mouse clicks, keyboard focus, or pointer events. These classes help you enable or disable interactivity without writing custom CSS or JavaScript
+ 
+3. visibility utility classes
+            The visibility utility classes in Bootstrap allow you to control whether an element is visible or hidden without affecting the layout or spacing of the element on
+            the page.This means hidden elements still occupy space but are not shown            
